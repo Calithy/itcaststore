@@ -1,6 +1,8 @@
 package ylzl.domain;
 
-public class OrderItem {
+import java.io.Serializable;
+
+public class OrderItem implements Serializable {
     /*
     * `order_id` varchar(100) NOT NULL DEFAULT '',
   `product_id` varchar(100) NOT NULL DEFAULT '',

@@ -1,7 +1,9 @@
 package ylzl.domain;
 
 
-public class Notice {
+import java.io.Serializable;
+
+public class Notice implements Serializable {
     private int n_id;  //公告编号
     private String title; //公告标题
     private String details;//公告详情

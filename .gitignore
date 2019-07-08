@@ -1,0 +1,5 @@
+# IntelliJ
+/out/
+.idea
+# web
+/web/WEB-INF/classes/

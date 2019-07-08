@@ -1,8 +1,9 @@
 package ylzl.domain;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 
-public class User {
+public class User implements Serializable {
     /**
      * `id` int(11) NOT NULL AUTO_INCREMENT,
      *   `username` varchar(20) NOT NULL,
@@ -26,7 +27,7 @@ public class User {
     private  String activeCode;//激活码
     private  int    state;//状态
     private  String role; //角色
-    private  Date    registTime;//注册时间
+    private  Date registTime;//注册时间
 
     public int getId() {
         return id;

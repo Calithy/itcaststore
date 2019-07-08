@@ -1,8 +1,9 @@
 package ylzl.domain;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Order {
+public class Order implements Serializable {
     private String id; //商品编号
     private double moeny;//商品价格
     private String receiverAddress;//收获地址

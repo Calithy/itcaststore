@@ -1,6 +1,8 @@
 package ylzl.domain;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     /**
      *   `id` varchar(100) NOT NULL DEFAULT '',
      *   `name` varchar(40) DEFAULT NULL,
