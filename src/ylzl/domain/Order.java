@@ -76,4 +76,18 @@ public class Order implements Serializable {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id='" + id + '\'' +
+                ", moeny=" + moeny +
+                ", receiverAddress='" + receiverAddress + '\'' +
+                ", receiverName='" + receiverName + '\'' +
+                ", receiverPhone='" + receiverPhone + '\'' +
+                ", paystate=" + paystate +
+                ", ordertime=" + ordertime +
+                ", user_id=" + user_id +
+                '}';
+    }
 }

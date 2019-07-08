@@ -40,4 +40,14 @@ public class Notice implements Serializable {
     public void setN_time(String n_time) {
         this.n_time = n_time;
     }
+
+    @Override
+    public String toString() {
+        return "Notice{" +
+                "n_id=" + n_id +
+                ", title='" + title + '\'' +
+                ", details='" + details + '\'' +
+                ", n_time='" + n_time + '\'' +
+                '}';
+    }
 }

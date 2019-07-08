@@ -36,4 +36,13 @@ public class OrderItem implements Serializable {
     public void setBuynum(int buynum) {
         this.buynum = buynum;
     }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "order_id='" + order_id + '\'' +
+                ", product_id='" + product_id + '\'' +
+                ", buynum=" + buynum +
+                '}';
+    }
 }

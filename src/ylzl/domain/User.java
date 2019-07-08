@@ -20,7 +20,7 @@ public class User implements Serializable {
     private  int id; //用户编号
     private  String username;//用户名
     private  String password;//密码
-    private  boolean gender;//性别
+    private  String gender;//性别
     private  String email;//邮件
     private  String telephone; //电话
     private  String introduce;//介绍
@@ -53,11 +53,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public boolean isGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -115,5 +115,22 @@ public class User implements Serializable {
 
     public void setRegistTime(Date registTime) {
         this.registTime = registTime;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", gender=" + gender +
+                ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", introduce='" + introduce + '\'' +
+                ", activeCode='" + activeCode + '\'' +
+                ", state=" + state +
+                ", role='" + role + '\'' +
+                ", registTime=" + registTime +
+                '}';
     }
 }
