@@ -19,4 +19,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> listAllProducts() {
         return productDao.selectAll();
     }
+
+    @Override
+    public int insert(Product product) {
+        return productDao.insert(product);
+    }
 }

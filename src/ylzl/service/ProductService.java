@@ -17,4 +17,10 @@ public interface ProductService {
      */
     public List<Product> listAllProducts();
 
+    /**
+     * 插入一条商品信息
+     * @param product
+     * @return
+     */
+    public int insert(Product product);
 }
