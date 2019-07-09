@@ -36,4 +36,11 @@ public interface ProductService {
      * @return
      */
     public List<String> getProductCategory();
+
+    /**
+     * 删除一条商品信息
+     * @param id
+     * @return
+     */
+    public int delete(String id);
 }
