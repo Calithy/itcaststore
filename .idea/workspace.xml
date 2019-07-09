@@ -8,13 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80e272d9-1b5b-4421-ae6a-3708b6c55958" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itcaststore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/itcaststore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/domain/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/domain/Notice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/domain/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ylzl/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/domain/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,16 +17,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/ylzl/dao/UserDaoTest.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ylzl/dao/NoticeDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+            <state relative-caret-position="242">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/NoticeDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="78" column="105" selection-start-line="78" selection-start-column="105" selection-end-line="78" selection-end-column="105" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ylzl/dao/NoticeDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,10 +55,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/UserDaoImpl.java">
+        <entry file="file://$PROJECT_DIR$/resources/c3p0-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+            <state relative-caret-position="154">
+              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/ylzl/dao/UserDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,7 +101,11 @@
         <option value="$PROJECT_DIR$/src/ylzl/domain/Product.java" />
         <option value="$PROJECT_DIR$/src/ylzl/domain/User.java" />
         <option value="$PROJECT_DIR$/src/ylzl/dao/impl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/ylzl/dao/NoticeDao.java" />
+        <option value="$PROJECT_DIR$/resources/c3p0-config.xml" />
         <option value="$PROJECT_DIR$/test/ylzl/dao/UserDaoTest.java" />
+        <option value="$PROJECT_DIR$/test/ylzl/dao/NoticeDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/ylzl/dao/impl/NoticeDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -123,6 +149,11 @@
             <path>
               <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
               <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -156,6 +187,24 @@
             <path>
               <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
               <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ylzl" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -163,21 +212,14 @@
               <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="CatdeaLogs" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -216,8 +258,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserDaoTest.testUpdate">
-    <configuration name="UserDaoTest.getByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.NoticeDaoTest.testUpdate">
+    <configuration name="NoticeDaoTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itcaststore" />
       <extension name="coverage">
         <pattern>
@@ -226,14 +268,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="getByIdTest" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.NoticeDaoTest" />
+      <option name="METHOD_NAME" value="testDelete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.getByUsernameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoticeDaoTest.testGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itcaststore" />
       <extension name="coverage">
         <pattern>
@@ -242,14 +284,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="getByUsernameTest" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.NoticeDaoTest" />
+      <option name="METHOD_NAME" value="testGetById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.selectAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoticeDaoTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itcaststore" />
       <extension name="coverage">
         <pattern>
@@ -258,30 +300,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.UserDaoTest" />
-      <option name="METHOD_NAME" value="selectAllTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDaoTest.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="itcaststore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ylzl.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.NoticeDaoTest" />
       <option name="METHOD_NAME" value="testInsert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserDaoTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoticeDaoTest.testSelectAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itcaststore" />
       <extension name="coverage">
         <pattern>
@@ -290,7 +316,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.UserDaoTest" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.NoticeDaoTest" />
+      <option name="METHOD_NAME" value="testSelectAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoticeDaoTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="itcaststore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ylzl.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ylzl.dao" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.NoticeDaoTest" />
       <option name="METHOD_NAME" value="testUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -404,19 +446,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat9" />
-      <item itemvalue="JUnit.UserDaoTest.getByUsernameTest" />
-      <item itemvalue="JUnit.UserDaoTest.getByIdTest" />
-      <item itemvalue="JUnit.UserDaoTest.selectAllTest" />
-      <item itemvalue="JUnit.UserDaoTest.testInsert" />
-      <item itemvalue="JUnit.UserDaoTest.testUpdate" />
+      <item itemvalue="JUnit.NoticeDaoTest.testGetById" />
+      <item itemvalue="JUnit.NoticeDaoTest.testSelectAll" />
+      <item itemvalue="JUnit.NoticeDaoTest.testInsert" />
+      <item itemvalue="JUnit.NoticeDaoTest.testDelete" />
+      <item itemvalue="JUnit.NoticeDaoTest.testUpdate" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDaoTest.testUpdate" />
-        <item itemvalue="JUnit.UserDaoTest.testInsert" />
-        <item itemvalue="JUnit.UserDaoTest.selectAllTest" />
-        <item itemvalue="JUnit.UserDaoTest.getByIdTest" />
-        <item itemvalue="JUnit.UserDaoTest.getByUsernameTest" />
+        <item itemvalue="JUnit.NoticeDaoTest.testUpdate" />
+        <item itemvalue="JUnit.NoticeDaoTest.testInsert" />
+        <item itemvalue="JUnit.NoticeDaoTest.testDelete" />
+        <item itemvalue="JUnit.NoticeDaoTest.testSelectAll" />
+        <item itemvalue="JUnit.NoticeDaoTest.testGetById" />
       </list>
     </recent_temporary>
   </component>
@@ -431,51 +473,51 @@
       <option name="presentableId" value="Default" />
       <updated>1562574957643</updated>
       <workItem from="1562574990766" duration="3059000" />
-      <workItem from="1562587821533" duration="6339000" />
+      <workItem from="1562587821533" duration="7159000" />
+      <workItem from="1562634538157" duration="2532000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserDaoTest_getByUsernameTest - 2019.07.08 at 21h 17m 08s.xml">
-      <configuration name="UserDaoTest.getByUsernameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_getByUsernameTest - 2019.07.08 at 21h 19m 16s.xml">
-      <configuration name="UserDaoTest.getByUsernameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_getByUsernameTest - 2019.07.08 at 21h 20m 28s.xml">
-      <configuration name="UserDaoTest.getByUsernameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_getByUsernameTest - 2019.07.08 at 21h 23m 48s.xml">
-      <configuration name="UserDaoTest.getByUsernameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_getByUsernameTest - 2019.07.08 at 21h 26m 10s.xml">
-      <configuration name="UserDaoTest.getByUsernameTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_getByIdTest - 2019.07.08 at 21h 29m 42s.xml">
-      <configuration name="UserDaoTest.getByIdTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_selectAllTest - 2019.07.08 at 21h 30m 50s.xml">
-      <configuration name="UserDaoTest.selectAllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UserDaoTest_testInsert - 2019.07.08 at 21h 46m 47s.xml">
+    <history-entry file="UserDaoTest_testInsert - 2019.07.09 at 09h 39m 55s.xml">
       <configuration name="UserDaoTest.testInsert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDaoTest_testInsert - 2019.07.08 at 21h 48m 23s.xml">
-      <configuration name="UserDaoTest.testInsert" configurationId="JUnit" />
+    <history-entry file="UserDaoTest_testUpdate - 2019.07.09 at 09h 40m 09s.xml">
+      <configuration name="UserDaoTest.testUpdate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserDaoTest_testInsert - 2019.07.08 at 21h 51m 27s.xml">
-      <configuration name="UserDaoTest.testInsert" configurationId="JUnit" />
+    <history-entry file="NoticeDaoTest_testGetById - 2019.07.09 at 09h 41m 31s.xml">
+      <configuration name="NoticeDaoTest.testGetById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testGetById - 2019.07.09 at 09h 42m 24s.xml">
+      <configuration name="NoticeDaoTest.testGetById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testSelectAll - 2019.07.09 at 09h 46m 08s.xml">
+      <configuration name="NoticeDaoTest.testSelectAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testInsert - 2019.07.09 at 09h 47m 49s.xml">
+      <configuration name="NoticeDaoTest.testInsert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testDelete - 2019.07.09 at 09h 48m 50s.xml">
+      <configuration name="NoticeDaoTest.testDelete" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testInsert - 2019.07.09 at 09h 49m 51s.xml">
+      <configuration name="NoticeDaoTest.testInsert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testUpdate - 2019.07.09 at 09h 50m 37s.xml">
+      <configuration name="NoticeDaoTest.testUpdate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NoticeDaoTest_testUpdate - 2019.07.09 at 09h 51m 20s.xml">
+      <configuration name="NoticeDaoTest.testUpdate" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10364000" />
+    <option name="totallyTimeSpent" value="13716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="JRebel" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23123324" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23458445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -483,11 +525,10 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="JRebel Executor" />
-      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
+      <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4546742" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4546742" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -499,8 +540,9 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="14" />
-      <window_info anchor="right" id="JRebel Setup Guide" weight="0.3297587" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -510,6 +552,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="9" weight="0.3297587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,10 +693,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/NoticeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="87" column="36" lean-forward="true" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+        <state relative-caret-position="1937">
+          <caret line="98" column="5" lean-forward="true" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -662,8 +712,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ylzl/dao/UserDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+        <state relative-caret-position="352">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/c3p0-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/NoticeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="78" column="105" selection-start-line="78" selection-start-column="105" selection-end-line="78" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ylzl/dao/NoticeDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
