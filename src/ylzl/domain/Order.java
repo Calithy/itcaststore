@@ -1,7 +1,7 @@
 package ylzl.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class Order implements Serializable {
     private String id; //商品编号
