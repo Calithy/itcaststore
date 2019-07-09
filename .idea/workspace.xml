@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e272d9-1b5b-4421-ae6a-3708b6c55958" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ylzl/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ylzl/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ylzl/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/ListProductServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="583">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +38,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="396">
+              <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/EditProductServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ylzl/service/ProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="352">
+              <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,14 +77,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ylzl/service/impl/ProductServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            <state relative-caret-position="477">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#375#376#0" expanded="true" />
                 <element signature="e#572#573#0" expanded="true" />
                 <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ylzl/dao/ProductDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/ylzl/dao/ProductDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,17 +164,18 @@
         <option value="$PROJECT_DIR$/src/ylzl/dao/OrderDao.java" />
         <option value="$PROJECT_DIR$/src/ylzl/dao/impl/OrderDaoImpl.java" />
         <option value="$PROJECT_DIR$/test/ylzl/dao/OrderDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/ylzl/dao/ProductDao.java" />
-        <option value="$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java" />
-        <option value="$PROJECT_DIR$/test/ylzl/dao/ProductDaoTest.java" />
         <option value="$PROJECT_DIR$/src/ylzl/dao/OrderItemDao.java" />
         <option value="$PROJECT_DIR$/test/ylzl/dao/OrderItemDaoTest.java" />
         <option value="$PROJECT_DIR$/src/ylzl/dao/impl/OrderItemDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/ylzl/web/servlet/manager/ListProductServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java" />
+        <option value="$PROJECT_DIR$/src/ylzl/web/servlet/manager/EditProductServlet.java" />
         <option value="$PROJECT_DIR$/src/ylzl/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/ylzl/service/impl/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java" />
+        <option value="$PROJECT_DIR$/src/ylzl/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/test/ylzl/dao/ProductDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java" />
       </list>
     </option>
   </component>
@@ -174,14 +231,14 @@
               <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ylzl" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itcaststore" type="b2602c69:ProjectViewProjectNode" />
               <item name="itcaststore" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ylzl" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -266,7 +323,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderItemDaoTest.testDelete">
+  <component name="RunManager" selected="JUnit.ProductDaoTest.testGetAllCategory">
     <configuration name="OrderItemDaoTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="itcaststore" />
       <extension name="coverage">
@@ -278,22 +335,6 @@
       <option name="PACKAGE_NAME" value="ylzl.dao" />
       <option name="MAIN_CLASS_NAME" value="ylzl.dao.OrderItemDaoTest" />
       <option name="METHOD_NAME" value="testDelete" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderItemDaoTest.testGetByProductId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="itcaststore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ylzl.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ylzl.dao" />
-      <option name="MAIN_CLASS_NAME" value="ylzl.dao.OrderItemDaoTest" />
-      <option name="METHOD_NAME" value="testGetByProductId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -342,6 +383,22 @@
       <option name="PACKAGE_NAME" value="ylzl.dao" />
       <option name="MAIN_CLASS_NAME" value="ylzl.dao.OrderItemDaoTest" />
       <option name="METHOD_NAME" value="testUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDaoTest.testGetAllCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="itcaststore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ylzl.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ylzl.dao" />
+      <option name="MAIN_CLASS_NAME" value="ylzl.dao.ProductDaoTest" />
+      <option name="METHOD_NAME" value="testGetAllCategory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -454,19 +511,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.tomcat9" />
-      <item itemvalue="JUnit.OrderItemDaoTest.testGetByProductId" />
       <item itemvalue="JUnit.OrderItemDaoTest.testSelectAll" />
       <item itemvalue="JUnit.OrderItemDaoTest.testInsert" />
       <item itemvalue="JUnit.OrderItemDaoTest.testUpdate" />
       <item itemvalue="JUnit.OrderItemDaoTest.testDelete" />
+      <item itemvalue="JUnit.ProductDaoTest.testGetAllCategory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductDaoTest.testGetAllCategory" />
         <item itemvalue="JUnit.OrderItemDaoTest.testDelete" />
         <item itemvalue="JUnit.OrderItemDaoTest.testUpdate" />
         <item itemvalue="JUnit.OrderItemDaoTest.testInsert" />
         <item itemvalue="JUnit.OrderItemDaoTest.testSelectAll" />
-        <item itemvalue="JUnit.OrderItemDaoTest.testGetByProductId" />
       </list>
     </recent_temporary>
   </component>
@@ -482,29 +539,11 @@
       <updated>1562574957643</updated>
       <workItem from="1562574990766" duration="3059000" />
       <workItem from="1562587821533" duration="7159000" />
-      <workItem from="1562634538157" duration="12787000" />
+      <workItem from="1562634538157" duration="16017000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductDaoTest_testUpdate - 2019.07.09 at 10h 53m 09s.xml">
-      <configuration name="ProductDaoTest.testUpdate" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductDaoTest_testDelete - 2019.07.09 at 10h 53m 23s.xml">
-      <configuration name="ProductDaoTest.testDelete" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderItemDaoTest_testGetByOrderId - 2019.07.09 at 11h 14m 44s.xml">
-      <configuration name="OrderItemDaoTest.testGetByOrderId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderItemDaoTest_testGetByProductId - 2019.07.09 at 11h 14m 55s.xml">
-      <configuration name="OrderItemDaoTest.testGetByProductId" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderItemDaoTest_testSelectAll - 2019.07.09 at 11h 15m 07s.xml">
-      <configuration name="OrderItemDaoTest.testSelectAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="OrderItemDaoTest_testInsert - 2019.07.09 at 11h 15m 15s.xml">
-      <configuration name="OrderItemDaoTest.testInsert" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OrderItemDaoTest_testInsert - 2019.07.09 at 11h 16m 16s.xml">
       <configuration name="OrderItemDaoTest.testInsert" configurationId="JUnit" />
     </history-entry>
@@ -517,15 +556,33 @@
     <history-entry file="OrderItemDaoTest_testDelete - 2019.07.09 at 11h 18m 32s.xml">
       <configuration name="OrderItemDaoTest.testDelete" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 11m 53s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 13m 49s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 15m 51s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 16m 40s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 17m 02s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDaoTest_testGetAllCategory - 2019.07.09 at 16h 17m 51s.xml">
+      <configuration name="ProductDaoTest.testGetAllCategory" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23971000" />
+    <option name="totallyTimeSpent" value="27201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24664879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -536,13 +593,13 @@
       <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4546742" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6303116" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2549575" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3045326" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -709,37 +766,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/ProductDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="23" column="33" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/NoticeDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="94" column="19" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ylzl/dao/ProductDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="43" lean-forward="true" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -816,10 +846,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/ListProductServlet.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet-api-4.0.1.jar!/javax/servlet/ServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="35" column="45" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/EditProductServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -828,39 +892,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ylzl/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="352">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ylzl/service/impl/ProductServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="477">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#375#376#0" expanded="true" />
             <element signature="e#572#573#0" expanded="true" />
             <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/src/ylzl/dao/impl/ProductDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        <state relative-caret-position="213">
+          <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ylzl/web/servlet/manager/AddProductServlet.java">
+    <entry file="file://$PROJECT_DIR$/test/ylzl/dao/ProductDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="39" />
+        <state relative-caret-position="433">
+          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,6 +1,7 @@
 package ylzl.dao.impl;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.ArrayListHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import ylzl.dao.ProductDao;
@@ -9,6 +10,7 @@ import ylzl.utils.C3P0Utils;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -77,6 +79,7 @@ public class ProductDaoImpl implements ProductDao {
         }
         return row;
     }
+
     @Override
     public int delete(int id) {
         //不应调用此方法
@@ -103,10 +106,29 @@ public class ProductDaoImpl implements ProductDao {
         String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%?%'";
         List<Product> products = null;
         try {
-            products = qr.query(sql, new BeanListHandler<Product>(Product.class),str);
+            products = qr.query(sql, new BeanListHandler<Product>(Product.class), str);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return products;
+    }
+
+
+    public List<String> getAllCategory() {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select category from products group by category";
+        List<String> categories = new ArrayList<>();
+        try {
+            List<Object[]> query = qr.query(sql,new ArrayListHandler());
+            for (Object[] objects : query) {
+                if (objects != null && objects.length >= 1){
+                    if (objects[0] != null)
+                        categories.add(objects[0].toString());
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return categories;
     }
 }

@@ -23,4 +23,17 @@ public interface ProductService {
      * @return
      */
     public int insert(Product product);
+
+    /**
+     * 通过ID查询商品信息
+     * @param id
+     * @return
+     */
+    public Product getProductById(String id);
+
+    /**
+     * 获取所有商品分类
+     * @return
+     */
+    public List<String> getProductCategory();
 }

@@ -28,12 +28,12 @@ public class AddProductServlet extends HttpServlet {
         ProductService productService = new ProductServiceImpl();
         Product product = new Product();
         product.setId(UUID.randomUUID().toString());
-        product.setName((String) req.getAttribute("name"));
-        product.setPrice((Double) req.getAttribute("price"));
-        product.setDescription((String) req.getAttribute("description"));
-        product.setPnum((Integer) req.getAttribute("pnum"));
-        product.setCategory((String) req.getAttribute("category"));
-        product.setImgurl((String) req.getAttribute("imgurl"));
+        product.setName(req.getParameter("name"));
+        product.setPrice( Double.parseDouble(req.getParameter("price")));
+        product.setDescription(req.getParameter("description"));
+        product.setPnum(Integer.parseInt(req.getParameter("pnum")));
+        product.setCategory(req.getParameter("category"));
+        product.setImgurl(req.getParameter("imgurl"));
         int insert = productService.insert(product);
         if (insert <= 0){
             //放入错误提示信息
