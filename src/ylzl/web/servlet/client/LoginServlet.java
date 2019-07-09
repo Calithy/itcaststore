@@ -1,8 +1,8 @@
 package ylzl.web.servlet.client;
 
-import ylzl.dao.UserDao;
-import  ylzl.dao.impl.UserDaoImpl;
 import ylzl.domain.User;
+import ylzl.service.UserService;
+import ylzl.service.impl.UserServiceImpl;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -60,8 +60,8 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String u_name = (String)session.getAttribute("u_name");
         String pwd = (String)session.getAttribute("pwd");
-        UserDao userDao = new UserDaoImpl();
-        User user = userDao.getByUsername(u_name);
+        UserService userService = new UserServiceImpl();
+        User user = userService.findUserByUsername(u_name);
         String info =  null;
         if(user == null){
             info = "账号未注册，请先注册!";

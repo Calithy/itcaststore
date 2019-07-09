@@ -11,21 +11,28 @@ import java.util.List;
 
 /**
  * @program: itcaststore
- * @description: 展示所有商品信息
+ * @description: 编辑商品 Servlet
  * @author: Leo
- * @create: 2019-07-09 14:37
+ * @create: 2019-07-09 15:44
  **/
-public class ListProductServlet extends HttpServlet {
+public class EditProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductService productService = new ProductServiceImpl();
-        List<Product> products = productService.listAllProducts();
-        req.setAttribute("products",products);
-        req.getRequestDispatcher("/admin/products/list.jsp").forward(req,resp);
+        String id = req.getParameter("id");
+        //查询商品信息
+        Product product = productService.getProductById(id);
+        //获取所有商品分类
+        List<String> categories = productService.getProductCategory();
+        //加入request域
+        req.setAttribute("product",product);
+        req.setAttribute("categories", categories);
+        //转发至编辑页面
+        req.getRequestDispatcher("").forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doGet(req,resp);
+
     }
 }

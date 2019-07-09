@@ -1,8 +1,9 @@
 package ylzl.web.servlet.client;
 
-import ylzl.dao.UserDao;
-import ylzl.dao.impl.UserDaoImpl;
+
 import ylzl.domain.User;
+import ylzl.service.UserService;
+import ylzl.service.impl.UserServiceImpl;
 import ylzl.utils.EmailUtils;
 
 import javax.servlet.ServletException;
@@ -27,8 +28,8 @@ public class RegisterServlet extends HttpServlet {
         String sex = session.getAttribute("sex").toString();
         String phone = session.getAttribute("phone").toString();
         String description = session.getAttribute("description").toString();
-        UserDao userDao = new UserDaoImpl();
-        User user = userDao.getByUsername("u_name");
+        UserService userService = new UserServiceImpl();
+        User user = userService.findUserByUsername(u_name);
         String info = null;
         if(user == null){
             /*插入数据库*/
@@ -39,11 +40,10 @@ public class RegisterServlet extends HttpServlet {
             r_user.setRole("普通用户");
             r_user.setState(false); //默认未激活且为普通用户
             String code = UUID.randomUUID().toString(); //生成checkcode
-            userDao.insert(user);
+            userService.insert(user);
         }else{
             info = "用户已注册!";
         }
-        user = userDao.getByUsername(u_name);
         session.setAttribute("user",user);
         EmailUtils.sendAccountActivateEmail(user);
         session.setAttribute("message",info);

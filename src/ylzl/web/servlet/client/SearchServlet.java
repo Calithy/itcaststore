@@ -1,7 +1,6 @@
 package ylzl.web.servlet.client;
 
-import ylzl.dao.ProductDao;
-import ylzl.dao.impl.ProductDaoImpl;
+
 import ylzl.domain.Product;
 
 import javax.servlet.ServletException;
@@ -9,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -22,11 +20,19 @@ public class SearchServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        HttpSession session = request.getSession();
         //模糊查询字符串
-        String f_name = session.getAttribute("f_name").toString();
-        ProductDao productDao = new ProductDaoImpl();
-        List<Product> productList = productDao.findByStr(f_name);
-        
+        String f_name = request.getAttribute("f_name").toString();
+        String nowNum = request.getAttribute("pageName").toString();
+        int pageNum = 0;
+        int pageSize = 5;
+        if(!nowNum.isEmpty()){
+            pageNum = Integer.parseInt(nowNum);
+        }
+        ProductService productService = new ProductServiceImpl();
+        List<Product> productList = productService.findAllProductWithPage(pageNum,pageSize,f_name);
+        request.setAttribute("productListWithPage",productList);
+        request.getRequestDispatcher("显示页面").forward(request,response);
+
+
     }
 }
