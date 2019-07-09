@@ -2,6 +2,8 @@ package ylzl.web.servlet.client;
 
 
 import ylzl.domain.Product;
+import ylzl.service.ProductService;
+import ylzl.service.impl.ProductServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

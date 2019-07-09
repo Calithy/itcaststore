@@ -31,7 +31,8 @@ public class LoginServlet extends HttpServlet {
     public void init(){
         try {
             /*加载servlet时将资源加载，并存入list*/
-            String path = getServletContext().getRealPath("/WEB-INF/classes/new_words.txt");
+            String path = this.getClass().getClassLoader().getResource("new_words.txt").getPath();
+
             BufferedReader bf = new BufferedReader(new FileReader(path));
             String line = null;
             while((line = bf.readLine()) != null){
@@ -89,7 +90,7 @@ public class LoginServlet extends HttpServlet {
      * @param response
      * @throws IOException
      */
-    private  void checkCode(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public   void checkCode(HttpServletRequest request,HttpServletResponse response) throws IOException {
         //设置图片大小
         int width = 120;
         int height = 30;
