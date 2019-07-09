@@ -52,7 +52,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //禁止缓存
         response.setHeader("Cache-Control","no-cache");
-
+        request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         //生成验证码
         checkCode(request,response);
