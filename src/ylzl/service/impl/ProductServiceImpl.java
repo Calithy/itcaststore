@@ -19,4 +19,24 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> listAllProducts() {
         return productDao.selectAll();
     }
+
+    @Override
+    public int insert(Product product) {
+        return productDao.insert(product);
+    }
+
+    @Override
+    public Product getProductById(String id) {
+        return productDao.getById(id);
+    }
+
+    @Override
+    public List<String> getProductCategory() {
+        return productDao.getAllCategory();
+    }
+
+    @Override
+    public int delete(String id) {
+        return productDao.delete(id);
+    }
 }

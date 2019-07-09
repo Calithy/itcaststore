@@ -2,6 +2,9 @@
 /out/
 /target/
 .idea
+.idea/
+/.idea
+/.idea/
 # web
 /web/WEB-INF/classes/
 # test

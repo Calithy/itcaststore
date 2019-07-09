@@ -17,4 +17,30 @@ public interface ProductService {
      */
     public List<Product> listAllProducts();
 
+    /**
+     * 插入一条商品信息
+     * @param product
+     * @return
+     */
+    public int insert(Product product);
+
+    /**
+     * 通过ID查询商品信息
+     * @param id
+     * @return
+     */
+    public Product getProductById(String id);
+
+    /**
+     * 获取所有商品分类
+     * @return
+     */
+    public List<String> getProductCategory();
+
+    /**
+     * 删除一条商品信息
+     * @param id
+     * @return
+     */
+    public int delete(String id);
 }

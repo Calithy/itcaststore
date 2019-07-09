@@ -31,4 +31,12 @@ public interface ProductDao extends BaseDao<Product>{
      * @return
      */
     public List<Product> findByStr(String str);
+
+
+
+    /**
+     * 查询所有分类
+     * @return
+     */
+    public List<String> getAllCategory();
 }
