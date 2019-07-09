@@ -11,4 +11,28 @@
         <servlet-name>listProductServlet</servlet-name>
         <url-pattern>/listProduct</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>addProductServlet</servlet-name>
+        <servlet-class>ylzl.web.servlet.manager.AddProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addProductServlet</servlet-name>
+        <url-pattern>/addProduct</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>editProductServlet</servlet-name>
+        <servlet-class>ylzl.web.servlet.manager.EditProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editProductServlet</servlet-name>
+        <url-pattern>/editProduct</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteProduct</servlet-name>
+        <servlet-class>ylzl.web.servlet.manager.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteProduct</servlet-name>
+        <url-pattern>/deleteProduct</url-pattern>
+    </servlet-mapping>
 </web-app>
