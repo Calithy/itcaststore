@@ -3,15 +3,6 @@ package ylzl.domain;
 import java.io.Serializable;
 
 public class Product implements Serializable {
-    /**
-     *   `id` varchar(100) NOT NULL DEFAULT '',
-     *   `name` varchar(40) DEFAULT NULL,
-     *   `price` double DEFAULT NULL,
-     *   `category` varchar(40) DEFAULT NULL,
-     *   `pnum` int(11) DEFAULT NULL,
-     *   `imgurl` varchar(100) DEFAULT NULL,
-     *   `description` varchar(255) DEFAULT NULL,
-     */
     private String id; //商品编号
     private String name;//商品名称
     private double price;//商品价格
