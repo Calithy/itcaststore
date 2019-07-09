@@ -2,6 +2,8 @@ package ylzl.dao;
 
 import ylzl.domain.Product;
 
+import java.util.List;
+
 /**
  * @program: itcaststore
  * @description: 商品dao
@@ -22,4 +24,11 @@ public interface ProductDao extends BaseDao<Product>{
      * @return
      */
     public int delete(String id);
+
+    /**
+     * 根据str模糊查询商品
+     * @param str
+     * @return
+     */
+    public List<Product> findByStr(String str);
 }

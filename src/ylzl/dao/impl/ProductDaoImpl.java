@@ -7,8 +7,10 @@ import ylzl.dao.ProductDao;
 import ylzl.domain.Product;
 import ylzl.utils.C3P0Utils;
 
+
 import java.sql.SQLException;
 import java.util.List;
+
 
 /**
  * @program: itcaststore
@@ -95,4 +97,16 @@ public class ProductDaoImpl implements ProductDao {
         return row;
     }
 
+    @Override
+    public List<Product> findByStr(String str) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%?%'";
+        List<Product> products = null;
+        try {
+            products = qr.query(sql, new BeanListHandler<Product>(Product.class),str);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
 }
