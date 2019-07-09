@@ -131,4 +131,17 @@ public class ProductDaoImpl implements ProductDao {
         }
         return categories;
     }
+
+    @Override
+    public List<Product> findByIndexRange(int start, int pagesize,String f_name) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name like %?% limit ?,?";
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql, new BeanListHandler<Product>(Product.class), f_name, start, pagesize);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+    }
 }

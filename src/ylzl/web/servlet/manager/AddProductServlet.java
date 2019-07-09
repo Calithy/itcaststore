@@ -1,6 +1,8 @@
 package ylzl.web.servlet.manager;
 
 import ylzl.domain.Product;
+import ylzl.service.ProductService;
+import ylzl.service.impl.ProductServiceImpl;
 
 
 import javax.servlet.ServletException;

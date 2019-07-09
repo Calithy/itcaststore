@@ -43,4 +43,20 @@ public interface ProductService {
      * @return
      */
     public int delete(String id);
+
+    /** 根据str 查询出所有的Products
+     * @param str
+     * @return
+             */
+    public List<Product> listAllProductsByStr(String str);
+
+    /**
+     * 根据当前页码和页面大小以及关键词查询商品列表
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    public  List<Product> findAllProductWithPage(int pageNum,int pageSize,String f_name);
+
+
 }

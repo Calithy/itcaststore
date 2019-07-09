@@ -2,6 +2,7 @@ package ylzl.service.impl;
 
 import ylzl.dao.ProductDao;
 import ylzl.dao.impl.ProductDaoImpl;
+import ylzl.domain.PageBean;
 import ylzl.domain.Product;
 import ylzl.service.ProductService;
 
@@ -39,4 +40,21 @@ public class ProductServiceImpl implements ProductService {
     public int delete(String id) {
         return productDao.delete(id);
     }
+
+    public List<Product> listAllProductsByStr(String str) { return  productDao.findByStr(str); }
+
+    @Override
+    public List<Product> findAllProductWithPage(int pageNum, int pageSize,String f_name) {
+        List<Product> productList = listAllProducts();
+        int totalRecord = productList.size(); //总的记录条数
+        PageBean pageBean = new PageBean(pageNum, pageSize, totalRecord);
+
+        int startIndex = pageBean.getStartIndex();
+
+        productList = productDao.findByIndexRange(startIndex, pageSize, f_name);
+        pageBean.setList(productList);
+        return productList;
+    }
+
+
 }
