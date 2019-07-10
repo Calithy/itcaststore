@@ -40,5 +40,37 @@ public interface ProductDao extends BaseDao<Product>{
      */
     public List<String> getAllCategory();
 
-    public  List<Product> findByIndexRange(int start,int pagesize,String f_name);
+    /**
+     * 根据索引范围以及str模糊查询
+     * @param start
+     * @param pagesize
+     * @param f_name
+     * @return
+     */
+    public  List<Product> findBynameAndIndexRange(int start,int pagesize,String f_name);
+
+    /**
+     * 根据商品类别查询商品
+     * @param category
+     * @return
+     */
+    public  List<Product> findByCategory(String category);
+
+    /**
+     * 根据商品类别分页查询商品
+     * @param category
+     * @return
+     */
+    public  List<Product> findByCategoryWithPage(String category,int startIndex,int pageSize);
+
+    /**
+     * 分页查询所有商品
+     * @param startIndex
+     * @param pageSize
+     * @return
+     */
+    public  List<Product> findProductsWithPage(int startIndex,int pageSize);
+
+
+
 }

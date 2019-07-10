@@ -31,7 +31,7 @@ public class SearchServlet extends HttpServlet {
             pageNum = Integer.parseInt(nowNum);
         }
         ProductService productService = new ProductServiceImpl();
-        List<Product> productList = productService.findAllProductWithPage(pageNum,pageSize,f_name);
+        List<Product> productList = productService.findAllProductBynameWithPage(pageNum,pageSize,f_name);
         request.setAttribute("productListWithPage",productList);
         request.getRequestDispatcher("显示页面").forward(request,response);
 
