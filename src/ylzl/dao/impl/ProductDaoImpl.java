@@ -103,10 +103,11 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public List<Product> findByStr(String str) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
-        String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%?%'";
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%'?'%' ";
         List<Product> products = null;
         try {
-            products = qr.query(sql, new BeanListHandler<Product>(Product.class), str);
+
+            products = qr.query(sql, new BeanListHandler<Product>(Product.class),str);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -130,5 +131,18 @@ public class ProductDaoImpl implements ProductDao {
             e.printStackTrace();
         }
         return categories;
+    }
+
+    @Override
+    public List<Product> findByIndexRange(int start, int pagesize,String f_name) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name like '%'?'%' limit ?,?";
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql, new BeanListHandler<Product>(Product.class), f_name, start, pagesize);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
     }
 }

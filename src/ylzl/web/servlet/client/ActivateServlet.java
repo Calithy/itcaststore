@@ -3,6 +3,8 @@ package ylzl.web.servlet.client;
 import ylzl.dao.UserDao;
 import ylzl.dao.impl.UserDaoImpl;
 import ylzl.domain.User;
+import ylzl.service.UserService;
+import ylzl.service.impl.UserServiceImpl;
 import ylzl.utils.GenerateLinkUtils;
 
 import javax.servlet.ServletException;
@@ -23,8 +25,8 @@ public class ActivateServlet extends HttpServlet {
         if(!idValue.isEmpty()){
             id = Integer.parseInt(idValue);
         }
-        UserDao userDao = new UserDaoImpl();
-        User user = ((UserDaoImpl) userDao).getById(id);
+        UserService userService = new UserServiceImpl();
+        User user = userService.findUserById(id);
         //user.setState(true);
         if(GenerateLinkUtils.verifyCheckcode(user,req)){
             user.setState(true);

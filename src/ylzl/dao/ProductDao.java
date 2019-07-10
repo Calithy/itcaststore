@@ -39,4 +39,6 @@ public interface ProductDao extends BaseDao<Product>{
      * @return
      */
     public List<String> getAllCategory();
+
+    public  List<Product> findByIndexRange(int start,int pagesize,String f_name);
 }

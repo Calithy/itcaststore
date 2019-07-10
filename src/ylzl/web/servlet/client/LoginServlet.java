@@ -1,8 +1,8 @@
 package ylzl.web.servlet.client;
 
-import ylzl.dao.UserDao;
-import  ylzl.dao.impl.UserDaoImpl;
 import ylzl.domain.User;
+import ylzl.service.UserService;
+import ylzl.service.impl.UserServiceImpl;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -31,7 +31,8 @@ public class LoginServlet extends HttpServlet {
     public void init(){
         try {
             /*加载servlet时将资源加载，并存入list*/
-            String path = getServletContext().getRealPath("/WEB-INF/classes/new_words.txt");
+            String path = this.getClass().getClassLoader().getResource("new_words.txt").getPath();
+
             BufferedReader bf = new BufferedReader(new FileReader(path));
             String line = null;
             while((line = bf.readLine()) != null){
@@ -60,8 +61,8 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String u_name = (String)session.getAttribute("u_name");
         String pwd = (String)session.getAttribute("pwd");
-        UserDao userDao = new UserDaoImpl();
-        User user = userDao.getByUsername(u_name);
+        UserService userService = new UserServiceImpl();
+        User user = userService.findUserByUsername(u_name);
         String info =  null;
         if(user == null){
             info = "账号未注册，请先注册!";
@@ -89,7 +90,7 @@ public class LoginServlet extends HttpServlet {
      * @param response
      * @throws IOException
      */
-    private  void checkCode(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public   void checkCode(HttpServletRequest request,HttpServletResponse response) throws IOException {
         //设置图片大小
         int width = 120;
         int height = 30;
