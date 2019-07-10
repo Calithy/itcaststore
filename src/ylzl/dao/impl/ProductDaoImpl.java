@@ -103,7 +103,8 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public List<Product> findByStr(String str) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
-        String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%'?'%' ";
+        /*模糊查询不要忘记 ? 两侧的空格*/
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name LIKE '%' ? '%' ";
         List<Product> products = null;
         try {
 
@@ -134,9 +135,9 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
-    public List<Product> findByIndexRange(int start, int pagesize,String f_name) {
+    public List<Product> findBynameAndIndexRange(int start, int pagesize,String f_name) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
-        String sql = "select id,name,price,category,pnum,imgurl,description from products where name like '%'?'%' limit ?,?";
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where name like '%' ? '%' limit ?,?";
         List<Product> productList = null;
         try {
             productList = qr.query(sql, new BeanListHandler<Product>(Product.class), f_name, start, pagesize);
@@ -144,5 +145,45 @@ public class ProductDaoImpl implements ProductDao {
             e.printStackTrace();
         }
         return productList;
+    }
+
+    @Override
+    public List<Product> findByCategoryWithPage(String category,int startIndex,int pageSize) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where category = ? limit ?,?";
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql,new BeanListHandler<Product>(Product.class),category,startIndex,pageSize);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+    }
+
+    @Override
+    public List<Product> findByCategory(String category) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where category = ?";
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql,new BeanListHandler<Product>(Product.class),category);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+    }
+
+    @Override
+    public List<Product> findProductsWithPage(int startIndex, int pageSize) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products limit ?,?";
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql,new BeanListHandler<Product>(Product.class),startIndex,pageSize);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+
     }
 }

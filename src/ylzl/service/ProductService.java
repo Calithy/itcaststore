@@ -56,7 +56,22 @@ public interface ProductService {
      * @param pageSize
      * @return
      */
-    public  List<Product> findAllProductWithPage(int pageNum,int pageSize,String f_name);
+    public  List<Product> findAllProductBynameWithPage(int pageNum,int pageSize,String f_name);
 
+    /**
+     * 根据当前页码和页面大小以及商品类别查询商品列表
+     * @param pageNum
+     * @param pageSize
+     * @param category
+     * @return
+     */
+    public  List<Product> findProductByCategoryWithPage(int pageNum,int pageSize,String category);
 
+    /**
+     * 分页展示商品
+     * @param pageNum
+     * @param pageSize
+     * @return
+     */
+    public  List<Product> listProductWithPage(int pageNum,int pageSize);
 }

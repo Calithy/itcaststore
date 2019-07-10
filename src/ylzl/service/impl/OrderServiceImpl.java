@@ -19,4 +19,20 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> listAllOrders() {
         return orderDao.selectAll();
     }
+
+    @Override
+    public int insert(Order order) {
+        return orderDao.insert(order);
+    }
+
+    @Override
+    public Order getOrderById(String id) {
+       return orderDao.getById(id);
+
+    }
+
+    @Override
+    public int delOrderById(String id) {
+       return orderDao.delete(id);
+    }
 }
