@@ -22,7 +22,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.UUID;
 
-@WebServlet(name = "CreateOrderServlet")
+@WebServlet(name = "CreateOrderServlet",
+            urlPatterns = "/CreateOrderServlet")
 public class CreateOrderServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -46,6 +47,7 @@ public class CreateOrderServlet extends HttpServlet {
             orderItem.setOrder_id(order.getId());
             orderItem.setBuynum(cart.get(product));
             orderItem.setProduct_id(product.getId());
+            order.getOrderItemList().add(orderItem);
             orderItemService.insert(orderItem);
         }
 
@@ -55,7 +57,6 @@ public class CreateOrderServlet extends HttpServlet {
         /**
          * 跳转到订单创建成功页面
          */
-
 
     }
 

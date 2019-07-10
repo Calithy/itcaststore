@@ -23,5 +23,11 @@ public interface UserService {
      * @param user
      */
     public int insert(User user);
+
+    /**
+     * 更新User信息
+     * @return
+     */
+    public  int update(User user);
 }
 

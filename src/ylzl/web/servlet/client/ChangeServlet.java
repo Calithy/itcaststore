@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-@WebServlet(name = "ChangeServletServlet")
-public class ChangeServletServlet extends HttpServlet {
+@WebServlet(name = "ChangeServlet",
+            urlPatterns = "/ChangeServlet")
+public class ChangeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
     }
