@@ -3,36 +3,5 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>listProductServlet</servlet-name>
-        <servlet-class>ylzl.web.servlet.manager.ListProductServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>listProductServlet</servlet-name>
-        <url-pattern>/listProduct</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>addProductServlet</servlet-name>
-        <servlet-class>ylzl.web.servlet.manager.AddProductServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>addProductServlet</servlet-name>
-        <url-pattern>/addProduct</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>editProductServlet</servlet-name>
-        <servlet-class>ylzl.web.servlet.manager.EditProductServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>editProductServlet</servlet-name>
-        <url-pattern>/editProduct</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>deleteProduct</servlet-name>
-        <servlet-class>ylzl.web.servlet.manager.DeleteProductServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>deleteProduct</servlet-name>
-        <url-pattern>/deleteProduct</url-pattern>
-    </servlet-mapping>
+
 </web-app>

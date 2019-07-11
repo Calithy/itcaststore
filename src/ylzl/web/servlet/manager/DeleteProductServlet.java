@@ -5,6 +5,7 @@ import ylzl.service.ProductService;
 import ylzl.service.impl.ProductServiceImpl;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import java.io.IOException;
  * @author: Leo
  * @create: 2019-07-09 16:41
  **/
+@WebServlet(name = "deleteProduct", urlPatterns = {"/deleteProduct"})
 public class DeleteProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

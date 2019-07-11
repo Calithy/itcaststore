@@ -6,6 +6,7 @@ import ylzl.service.impl.ProductServiceImpl;
 
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import java.util.UUID;
  * @author: Leo
  * @create: 2019-07-09 15:06
  **/
+@WebServlet(name = "addProduct", urlPatterns = {"/addProduct"})
 public class AddProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
