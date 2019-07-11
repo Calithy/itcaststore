@@ -1,10 +1,11 @@
 package ylzl.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+import java.util.List;
 
 public class Order implements Serializable {
-    private String id; //商品编号
+    private String id; //订单编号
     private double moeny;//商品价格
     private String receiverAddress;//收获地址
     private String receiverName;//收货人姓名
@@ -12,6 +13,15 @@ public class Order implements Serializable {
     private int    paystate;//支付状态
     private Date ordertime;//订单时间
     private int user_id;//用户id
+    private List<OrderItem> orderItemList; //订单详情
+
+    public List<OrderItem> getOrderItemList() {
+        return orderItemList;
+    }
+
+    public void setOrderItemList(List<OrderItem> orderItemList) {
+        this.orderItemList = orderItemList;
+    }
 
     public String getId() {
         return id;

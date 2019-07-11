@@ -3,12 +3,7 @@ package ylzl.domain;
 import java.io.Serializable;
 
 public class OrderItem implements Serializable {
-    /*
-    * `order_id` varchar(100) NOT NULL DEFAULT '',
-  `product_id` varchar(100) NOT NULL DEFAULT '',
-  `buynum` int(11) DEFAULT NULL,
-  PRIMARY KEY (`order_id`,`product_id`)
-    * */
+
     private String order_id; //订单编号
     private String product_id;//产品编号
     private int    buynum;//购买数量

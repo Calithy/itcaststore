@@ -4,19 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class User implements Serializable {
-    /**
-     * `id` int(11) NOT NULL AUTO_INCREMENT,
-     *   `username` varchar(20) NOT NULL,
-     *   `PASSWORD` varchar(20) NOT NULL,
-     *   `gender` varchar(2) DEFAULT NULL,
-     *   `email` varchar(50) DEFAULT NULL,
-     *   `telephone` varchar(20) DEFAULT NULL,
-     *   `introduce` varchar(100) DEFAULT NULL,
-     *   `activeCode` varchar(50) DEFAULT NULL,
-     *   `state` int(11) DEFAULT '0',
-     *   `role` varchar(10) DEFAULT '普通用户',
-     *   `registTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-     */
     private  int id; //用户编号
     private  String username;//用户名
     private  String password;//密码
@@ -25,7 +12,7 @@ public class User implements Serializable {
     private  String telephone; //电话
     private  String introduce;//介绍
     private  String activeCode;//激活码
-    private  int    state;//状态
+    private  boolean    state;//状态
     private  String role; //角色
     private  Date registTime;//注册时间
 
@@ -93,11 +80,11 @@ public class User implements Serializable {
         this.activeCode = activeCode;
     }
 
-    public int getState() {
+    public boolean getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState(boolean state) {
         this.state = state;
     }
 
