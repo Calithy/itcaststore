@@ -1,0 +1,50 @@
+.space{
+			padding-top:40; 
+		}
+		.space-deg2{
+			padding-top: 20;
+			padding-left: 100;
+		}
+		 .nav-space{
+		 	padding-top:20; 
+		 	padding-left: 0;
+		 	padding-right: 0;
+		 }
+		 .bg-green{
+		 	 
+		 	height:6px;
+		 	background-color: #b4d76d;
+		 }
+		 .bg-yellow{
+		 	background-color: #F59F1D;
+		 	height: 50px;
+		 }
+		 .bg-black{
+		 	background-color: black;
+		  
+		 }
+		 .color-white{
+		 	color: white;
+		 }
+         
+		 
+ 		 .font-size-small{
+ 		 	font-size: 12px;
+ 		 }
+ 		 .add-mar{
+ 		 	margin-top: 10px;
+ 		 }
+ 		 .bg-grey{
+ 		 	line-height: 25px;
+ 		 	height: 60px;
+ 		 	background-color: #EFEFEF;
+ 		 }
+ 		 
+ 		.float-left{
+ 			float: left;
+ 			margin-left: 20px;
+ 			margin-top: 10px;
+ 		}
+ 		.clear{
+ 			clear: both;
+ 		}
