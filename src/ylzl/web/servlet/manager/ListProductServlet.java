@@ -23,8 +23,13 @@ public class ListProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductService productService = new ProductServiceImpl();
+        //查询出所有商品信息 以及分类信息
         List<Product> products = productService.listAllProducts();
+        List<String> categories = productService.getProductCategory();
+        //加入request域
         req.setAttribute("products",products);
+        req.setAttribute("categories",categories);
+        //转发
         req.getRequestDispatcher("/admin/productManage.jsp").forward(req,resp);
     }
 

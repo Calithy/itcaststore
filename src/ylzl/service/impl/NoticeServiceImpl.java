@@ -19,4 +19,9 @@ public class NoticeServiceImpl implements NoticeService {
     public List<Notice> listAllNotices() {
         return noticeDao.selectAll();
     }
+
+    @Override
+    public Notice getById(String id) {
+        return noticeDao.getById(Integer.parseInt(id));
+    }
 }

@@ -16,4 +16,11 @@ public interface NoticeService {
      * @return
      */
     public List<Notice> listAllNotices();
+
+    /**
+     * 通过ID查询公告
+     * @param id ID
+     * @return
+     */
+    public Notice getById(String id);
 }

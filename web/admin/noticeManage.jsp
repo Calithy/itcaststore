@@ -17,7 +17,7 @@
 		<div class="contentdiv2">
 			<div class="titlediv">公 告 列 表</div>
 			<div class="container-fluid con clearfix">
-				<button type="button" class="btn" name="add" value="添加">添加</button>
+				<button type="button" class="btn" name="add" value="添加" onclick="addNotice('${pageContext.request.contextPath}');">添加</button>
 				<table class="listDataTable table table-striped table-bordered table-hover">
 					<thead>
 						<tr class="info">
@@ -36,7 +36,7 @@
 								<td>${notice.title}</td>
 								<td>${notice.details}</td>
 								<td>${notice.n_time}</td>
-								<td><a href="modifyNotice.jsp"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
+								<td><a href="${pageContext.request.contextPath}/editNotice?id=${notice.n_id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
 								<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
@@ -47,5 +47,10 @@
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"/>
+<script>
+	function addNotice(path) {
+		$(location).attr("href",path + "/admin/editNotice.jsp");
+	}
+</script>
 </body>
 </html>

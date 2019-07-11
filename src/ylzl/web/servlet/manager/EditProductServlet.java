@@ -32,7 +32,7 @@ public class EditProductServlet extends HttpServlet {
         req.setAttribute("product",product);
         req.setAttribute("categories", categories);
         //转发至编辑页面
-        req.getRequestDispatcher("").forward(req,resp);
+        req.getRequestDispatcher("/admin/editProduct.jsp").forward(req,resp);
     }
 
     @Override

@@ -34,20 +34,9 @@
 							<td>
 								<select name="category" class="form-control">
 									<option value="" selected="selected">--选择商品类加--</option>
-									<option value="文学">文学</option>
-									<option value="生活">生活</option>
-									<option value="计算机">计算机</option>
-									<option value="外语">外语</option>
-									<option value="经营">经营</option>
-									<option value="励志">励志</option>
-									<option value="社科">社科</option>
-									<option value="学术">学术</option>
-									<option value="少儿">少儿</option>
-									<option value="艺术">艺术</option>
-									<option value="原版">原版</option>
-									<option value="科技">科技</option>
-									<option value="考试">考试</option>
-									<option value="生活百科">生活百科</option>
+									<c:forEach items="${categories}" var="cate">
+										<option value="${cate}">${cate}</option>
+									</c:forEach>
 								</select>
 							</td>
 						</tr>
@@ -64,7 +53,7 @@
 			</form>
 			<div class="titlediv">商 品 列 表</div>
 			<div class="container-fluid con clearfix">
-				<button type="button" class="btn" name="add" value="添加">添加</button>
+				<button type="button" class="btn" name="add" value="添加" onclick="addBtnClick('${pageContext.request.contextPath}');">添加</button>
 				<table class="listDataTable table table-striped table-bordered table-hover">
 					<thead>
 						<tr class="info">
@@ -85,7 +74,7 @@
 								<td>${product.price}</td>
 								<td>${product.pnum}</td>
 								<td>${product.category}</td>
-								<td><a href="${pageContext.request.contextPath}/admin/editProduct.jsp"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
+								<td><a href="${pageContext.request.contextPath}/editProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
 								<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
@@ -95,5 +84,11 @@
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"/>
+
+<script>
+	function addBtnClick(path) {
+		$(location).attr("href",path + "/admin/editProduct.jsp");
+	}
+</script>
 </body>
 </html>
