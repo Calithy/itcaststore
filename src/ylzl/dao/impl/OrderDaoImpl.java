@@ -6,6 +6,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import ylzl.dao.OrderDao;
 import ylzl.domain.Notice;
 import ylzl.domain.Order;
+import ylzl.dto.OrderDTO;
 import ylzl.utils.C3P0Utils;
 
 import java.sql.SQLException;
@@ -70,7 +71,7 @@ public class OrderDaoImpl implements OrderDao {
                 " values (?,?,?,?,?,?,?,?)";
         int row = 0;
         try {
-            row = qr.update(sql,entity.getId(),entity.getMoeny(),entity.getReceiverAddress(),entity.getReceiverName(),entity.getReceiverPhone(),
+            row = qr.update(sql,entity.getId(),entity.getMoney(),entity.getReceiverAddress(),entity.getReceiverName(),entity.getReceiverPhone(),
                     entity.getPaystate(),entity.getOrdertime(),entity.getUser_id());
         } catch (SQLException e) {
             e.printStackTrace();
@@ -92,6 +93,20 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public List<OrderDTO> selectAllOrdersWithUserInfo() {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select o.id,o.money,o.receiverAddress,o.receiverName,o.receiverPhone,o.ordertime,o.paystate,u.username as userName,u.id as userId" +
+                " from orders as o left join user as u on o.user_id = u.id";
+        List<OrderDTO> orderDTOS = null;
+        try {
+            orderDTOS = qr.query(sql, new BeanListHandler<OrderDTO>(OrderDTO.class));
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderDTOS;
+    }
+
+    @Override
     public int delete(int id) {
         //不应调用此方法
         return -1;
@@ -103,7 +118,7 @@ public class OrderDaoImpl implements OrderDao {
         String sql = "update orders set money=?, receiverAddress=?, receiverName=?, receiverPhone=?, paystate=?,ordertime=?,user_id=?  where id = ?";
         int row = 0;
         try {
-            row = qr.update(sql,entity.getMoeny(),entity.getReceiverAddress(),entity.getReceiverName(),entity.getReceiverPhone(),
+            row = qr.update(sql,entity.getMoney(),entity.getReceiverAddress(),entity.getReceiverName(),entity.getReceiverPhone(),
                     entity.getPaystate(),entity.getOrdertime(),entity.getUser_id(),entity.getId());
         } catch (SQLException e) {
             e.printStackTrace();

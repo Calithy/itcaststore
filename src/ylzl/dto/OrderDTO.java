@@ -1,27 +1,24 @@
-package ylzl.domain;
+package ylzl.dto;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
-public class Order implements Serializable {
+/**
+ * @program: itcaststore
+ * @description: 订单传输对象
+ * @author: Leo
+ * @create: 2019-07-11 15:27
+ **/
+public class OrderDTO implements Serializable {
     private String id; //订单编号
     private double money;//商品价格
     private String receiverAddress;//收获地址
     private String receiverName;//收货人姓名
     private String receiverPhone;//收货人电话
-    private int    paystate;//支付状态
+    private String paystate;//支付状态
     private Date ordertime;//订单时间
-    private int user_id;//用户id
-    private List<OrderItem> orderItemList; //订单详情
-
-    public List<OrderItem> getOrderItemList() {
-        return orderItemList;
-    }
-
-    public void setOrderItemList(List<OrderItem> orderItemList) {
-        this.orderItemList = orderItemList;
-    }
+    private int userId;//所属用户ID
+    private String userName;//所属用户姓名
 
     public String getId() {
         return id;
@@ -63,11 +60,11 @@ public class Order implements Serializable {
         this.receiverPhone = receiverPhone;
     }
 
-    public int getPaystate() {
+    public String getPaystate() {
         return paystate;
     }
 
-    public void setPaystate(int paystate) {
+    public void setPaystate(String paystate) {
         this.paystate = paystate;
     }
 
@@ -79,26 +76,34 @@ public class Order implements Serializable {
         this.ordertime = ordertime;
     }
 
-    public int getUser_id() {
-        return user_id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "OrderDTO{" +
                 "id='" + id + '\'' +
                 ", money=" + money +
                 ", receiverAddress='" + receiverAddress + '\'' +
                 ", receiverName='" + receiverName + '\'' +
                 ", receiverPhone='" + receiverPhone + '\'' +
-                ", paystate=" + paystate +
+                ", paystate='" + paystate + '\'' +
                 ", ordertime=" + ordertime +
-                ", user_id=" + user_id +
-                ", orderItemList=" + orderItemList +
+                ", userId=" + userId +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }

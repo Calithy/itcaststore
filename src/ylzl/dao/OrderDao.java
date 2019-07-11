@@ -1,6 +1,7 @@
 package ylzl.dao;
 
 import ylzl.domain.Order;
+import ylzl.dto.OrderDTO;
 
 import java.util.List;
 
@@ -31,4 +32,10 @@ public interface OrderDao extends BaseDao<Order> {
      * @return
      */
     public int delete(String id);
+
+    /**
+     * 查询所有订单信息（包含用户信息）
+     * @return
+     */
+    public List<OrderDTO> selectAllOrdersWithUserInfo();
 }

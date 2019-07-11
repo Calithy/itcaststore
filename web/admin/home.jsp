@@ -1,23 +1,23 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="assets/css/home.css"/>
+<meta charset="UTF-8">
+<%@include file="expend.jsp" %>
+<link href="${pageContext.request.contextPath}/css/admin.css" rel="stylesheet"/>
+<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet"/>
+<title>bookstore后台管理系统</title>
 </head>
 <body>
-    <!-- 头部 -->
-    <jsp:include page="header.jsp"/>
-    <div id="middle" class="row">
-        <!-- 左侧菜单 -->
-        <jsp:include page="left.jsp"/>
-        <div id="content" class="col-md-8">
-            内容
-        </div>
-    </div>
-    <!-- 底部 -->
-    <jsp:include page="footer.jsp"/>
-
+	<%@include file="head.jsp" %>
+	<div class="body">
+		<%@include file="left.jsp" %>
+		<div class="contentdiv1">
+			<div class="container-fluid headDiv">系统首页</div>
+			<div class="condiv">登录成功！</div>
+		</div>
+	</div>
+	<%@include file="footer.jsp" %>
 </body>
 </html>

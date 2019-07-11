@@ -3,6 +3,7 @@ package ylzl.service.impl;
 import ylzl.dao.OrderDao;
 import ylzl.dao.impl.OrderDaoImpl;
 import ylzl.domain.Order;
+import ylzl.dto.OrderDTO;
 import ylzl.service.OrderService;
 
 import java.util.List;
@@ -34,5 +35,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int delOrderById(String id) {
        return orderDao.delete(id);
+    }
+
+    @Override
+    public List<OrderDTO> listAllOrdersWithUserInfo() {
+        return orderDao.selectAllOrdersWithUserInfo();
     }
 }

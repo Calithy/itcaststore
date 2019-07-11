@@ -1,6 +1,7 @@
 package ylzl.service;
 
 import ylzl.domain.Order;
+import ylzl.dto.OrderDTO;
 
 import java.util.List;
 
@@ -33,4 +34,10 @@ public interface OrderService {
      * @param id
      */
     public int delOrderById(String id);
+
+    /**
+     * 查询所有订单信息（包含用户信息）
+     * @return
+     */
+    public List<OrderDTO> listAllOrdersWithUserInfo();
 }

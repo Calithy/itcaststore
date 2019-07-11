@@ -1,6 +1,6 @@
 package ylzl.web.servlet.manager;
 
-import ylzl.domain.Order;
+import ylzl.dto.OrderDTO;
 import ylzl.service.OrderService;
 import ylzl.service.impl.OrderServiceImpl;
 
@@ -23,9 +23,10 @@ public class ListOrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OrderService orderService = new OrderServiceImpl();
-        List<Order> orders = orderService.listAllOrders();
-        req.setAttribute("orders",orders);
-        req.getRequestDispatcher("").forward(req,resp);
+        List<OrderDTO> orderDTOS = orderService.listAllOrdersWithUserInfo();
+        req.setAttribute("orders",orderDTOS);
+        System.out.println(orderDTOS);
+        req.getRequestDispatcher("/admin/orderManage.jsp").forward(req,resp);
     }
 
     @Override
