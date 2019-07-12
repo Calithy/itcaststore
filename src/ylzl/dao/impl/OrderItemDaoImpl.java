@@ -97,6 +97,32 @@ public class OrderItemDaoImpl implements OrderItemDao {
     }
 
     @Override
+    public List<OrderItem> getByOrderIdAndProductId(String orderId, String productId) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select order_id,product_id,buynum from orderitem where order_id = ? and product_id = ?";
+        List<OrderItem> orderItems = null;
+        try {
+            orderItems = qr.query(sql, new BeanListHandler<OrderItem>(OrderItem.class),orderId,productId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderItems;
+    }
+
+    @Override
+    public List<OrderItem> selectOrdersById(String orderId) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select order_id,product_id,buynum from orderitem where order_id = ?";
+        List<OrderItem> orderItems = null;
+        try {
+            orderItems = qr.query(sql, new BeanListHandler<OrderItem>(OrderItem.class),orderId);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderItems;
+    }
+
+    @Override
     public int update(OrderItem entity) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
         String sql = "update orderitem set buynum=? where order_id = ?";

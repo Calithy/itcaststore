@@ -65,8 +65,8 @@
 								<c:if test="${order.paystate == 0}">未支付</c:if>
 								<c:if test="${order.paystate == 1}">已支付</c:if>
 							</td>
-							<td><a href="orderInfo.jsp"><img src="${pageContext.request.contextPath}/images/button_view.gif"></a></td>
-							<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+							<td><a href="${pageContext.request.contextPath}/orderInfo?id=${order.id}"><img src="${pageContext.request.contextPath}/images/button_view.gif"></a></td>
+							<td><a href="${pageContext.request.contextPath}/deleteOrder?id=${order.id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

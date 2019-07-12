@@ -1,8 +1,7 @@
 package ylzl.web.servlet.manager;
 
-
-import ylzl.service.ProductService;
-import ylzl.service.impl.ProductServiceImpl;
+import ylzl.service.NoticeService;
+import ylzl.service.impl.NoticeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,32 +12,31 @@ import java.io.IOException;
 
 /**
  * @program: itcaststore
- * @description: 删除商品信息Servlet
+ * @description: 删除公告Servlet
  * @author: Leo
- * @create: 2019-07-09 16:41
+ * @create: 2019-07-12 10:33
  **/
-@WebServlet(name = "deleteProduct", urlPatterns = {"/deleteProduct"})
-public class DeleteProductServlet extends HttpServlet {
+@WebServlet(name = "deleteNotice", urlPatterns = {"/deleteNotice"})
+public class DeleteNoticeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
-        ProductService productService = new ProductServiceImpl();
-        int delete = productService.delete(id);
+        NoticeService noticeService = new NoticeServiceImpl();
+        int delete = noticeService.delete(id);
         //删除失败
         if (delete <= 0){
-            //加入错误信息
-            req.setAttribute("message","删除商品信息失败");
-            req.getRequestDispatcher("/admin/productManage.jsp").forward(req,resp);
+            //放入错误信息
+            req.setAttribute("message","删除公告失败");
+            req.getRequestDispatcher("/admin/noticeManage.jsp").forward(req,resp);
         }
         //删除成功
         else {
             //重定向到列表页
-            resp.sendRedirect(req.getContextPath() + "/listProduct");
+            resp.sendRedirect(req.getContextPath() + "/listNotices");
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 }

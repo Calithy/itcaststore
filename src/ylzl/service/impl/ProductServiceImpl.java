@@ -81,4 +81,14 @@ public class ProductServiceImpl implements ProductService {
         pageBean.setList(productList);
         return productList;
     }
+
+    @Override
+    public List<String> listAllIds() {
+        return productDao.getAllIds();
+    }
+
+    @Override
+    public int update(Product product) {
+        return productDao.update(product);
+    }
 }

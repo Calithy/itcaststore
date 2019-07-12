@@ -71,6 +71,10 @@ public interface ProductDao extends BaseDao<Product>{
      */
     public  List<Product> findProductsWithPage(int startIndex, int pageSize);
 
-
+    /**
+     * 获取所有商品ID
+     * @return
+     */
+    public List<String> getAllIds();
 
 }
