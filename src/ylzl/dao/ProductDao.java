@@ -88,10 +88,4 @@ public interface ProductDao extends BaseDao<Product>{
      */
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice);
 
-    /**
-     * 获取所有id
-     * @return
-     */
-    public List<String> getAllIds();
-
 }
