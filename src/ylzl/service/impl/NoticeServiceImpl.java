@@ -24,19 +24,4 @@ public class NoticeServiceImpl implements NoticeService {
     public Notice getById(String id) {
         return noticeDao.getById(Integer.parseInt(id));
     }
-
-    @Override
-    public int insert(Notice notice) {
-        return noticeDao.insert(notice);
-    }
-
-    @Override
-    public int update(Notice notice) {
-        return noticeDao.update(notice);
-    }
-
-    @Override
-    public int delete(String id) {
-        return noticeDao.delete(Integer.parseInt(id));
-    }
 }

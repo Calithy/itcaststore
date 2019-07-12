@@ -40,11 +40,4 @@ public interface OrderService {
      * @return
      */
     public List<OrderDTO> listAllOrdersWithUserInfo();
-
-    /**
-     * 通过ID查询订单信息（包含用户信息）
-     * @param id
-     * @return
-     */
-    public OrderDTO getOrderByIdWithUserInfo(String id);
 }

@@ -26,14 +26,11 @@ public class DeleteProductServlet extends HttpServlet {
         int delete = productService.delete(id);
         //删除失败
         if (delete <= 0){
-            //加入错误信息
-            req.setAttribute("message","删除商品信息失败");
-            req.getRequestDispatcher("/admin/productManage.jsp").forward(req,resp);
+
         }
         //删除成功
         else {
-            //重定向到列表页
-            resp.sendRedirect(req.getContextPath() + "/listProduct");
+            req.getRequestDispatcher("").forward(req,resp);
         }
     }
 

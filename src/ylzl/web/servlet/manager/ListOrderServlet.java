@@ -25,6 +25,7 @@ public class ListOrderServlet extends HttpServlet {
         OrderService orderService = new OrderServiceImpl();
         List<OrderDTO> orderDTOS = orderService.listAllOrdersWithUserInfo();
         req.setAttribute("orders",orderDTOS);
+        System.out.println(orderDTOS);
         req.getRequestDispatcher("/admin/orderManage.jsp").forward(req,resp);
     }
 

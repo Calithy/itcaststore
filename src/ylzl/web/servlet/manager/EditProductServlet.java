@@ -24,15 +24,12 @@ public class EditProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductService productService = new ProductServiceImpl();
         String id = req.getParameter("id");
-        if (id != null && !"".equals(id)){
-            //查询商品信息
-            Product product = productService.getProductById(id);
-            //加入request域
-            req.setAttribute("product",product);
-        }
+        //查询商品信息
+        Product product = productService.getProductById(id);
         //获取所有商品分类
         List<String> categories = productService.getProductCategory();
         //加入request域
+        req.setAttribute("product",product);
         req.setAttribute("categories", categories);
         //转发至编辑页面
         req.getRequestDispatcher("/admin/editProduct.jsp").forward(req,resp);

@@ -15,7 +15,7 @@
 	<div class="body">
 		<jsp:include page="left.jsp"/>
 		<div class="contentdiv2">
-			<form action="${pageContext.request.contextPath}/saveProduct" method="post">
+			<form action="#" method="post">
 				<!-- id隐藏域 -->
 				<input type="hidden" name="id" value="${product.id}"/>
 				<div class="titlediv">编 辑 商 品</div>
@@ -38,13 +38,8 @@
 						<td>商品类别：</td>
 						<td>
 							<select name="category" class="form-control">
-                                <c:if test="${product == null}">
-                                    <option value="请选择商品类别">请选择商品类别</option>
-                                </c:if>
-                                <c:if test="${product != null}">
-                                    <option value="${product.category}">${product.category}</option>
-                                </c:if>
-								<c:forEach items="${categories}" var="cate">
+								<option value="${product.category}">${product.category}</option>
+								<c:forEach items="categories" var="cate">
 									<option value="${cate}">${cate}</option>
 								</c:forEach>
 							</select>

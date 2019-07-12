@@ -14,7 +14,7 @@
 	<div class="body">
 		<jsp:include page="left.jsp"/>
 		<div class="contentdiv2">
-			<form action="${pageContext.request.contextPath}/saveNotice" method="post">
+			<form action="#" method="post">
 				<!-- id隐藏域 -->
 				<input type="hidden" name="id" value="${notice.n_id}"/>
 				<div class="titlediv">修 改 公 告</div>
