@@ -64,7 +64,7 @@ public class UserDaoImpl implements UserDao {
         int row = 0;
         try {
             row = qr.update(sql,entity.getUsername(),entity.getPassword(),entity.getGender(),entity.getEmail(),
-                    entity.getTelephone(),entity.getIntroduce(),entity.getActiveCode(),entity.getState(),entity.getRole(),entity.getRegistTime());
+                    entity.getTelphone(),entity.getIntroduce(),entity.getActiveCode(),entity.getState(),entity.getRole(),entity.getRegistTime());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -91,7 +91,7 @@ public class UserDaoImpl implements UserDao {
         int row = 0;
         try {
             row = qr.update(sql,entity.getUsername(),entity.getPassword(),entity.getGender(),entity.getEmail(),
-                    entity.getTelephone(),entity.getIntroduce(),entity.getActiveCode(),entity.getState(),entity.getRole(),entity.getRegistTime(),entity.getId());
+                    entity.getTelphone(),entity.getIntroduce(),entity.getActiveCode(),entity.getState(),entity.getRole(),entity.getRegistTime(),entity.getId());
         } catch (SQLException e) {
             e.printStackTrace();
         }

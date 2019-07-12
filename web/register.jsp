@@ -82,17 +82,17 @@
 							  </div> 
 							  <div class="form-group">
 								  	<div class="row">
-								  		<label for="gender" class="col-sm-2 control-label">性别</label>
+								  		<label  class="col-sm-2 control-label">性别</label>
 								  		<div class="col-sm-6">
 								  			<div class="row">
 								  				<div class="radio radio-inline col-sm-3">
 								  					<label>
-								  						<input type="radio" name="gender" value="male" checked="">男
+								  						<input type="radio" name="gender" value="男" checked="">男
 								  					</label>
 								  				</div> 
 								  				<div class="radio radio-inline col-sm-3">
 								  					<label>
-								  						<input type="radio" name="gender" value="female">女
+								  						<input type="radio" name="gender" value="女">女
 								  					</label>
 								  				</div>
 								  			</div> 	
@@ -130,6 +130,8 @@
 								<label for="verifyingCode" class="col-sm-2">验证码</label>
 								<div class="col-sm-4">
 									<input type="text" id="verifyingCode" class="form-control-code-short form-control" placeholder="">
+									<img src="${pageContext.request.contextPath}/ImageCodeServlet" width="180"
+										 height="30" class="textinput" style="height: 30px;" id="img" />&nbsp;&nbsp;
 								</div>
 								<div class="col-sm-4" id="verifyingCode-pop" class="pop">验证码错误</div>
 							</div>

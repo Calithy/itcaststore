@@ -9,7 +9,7 @@ public class User implements Serializable {
     private  String password;//密码
     private  String gender;//性别
     private  String email;//邮件
-    private  String telephone; //电话
+    private  String telphone; //电话
     private  String introduce;//介绍
     private  String activeCode;//激活码
     private  boolean    state;//状态
@@ -56,12 +56,12 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public String getTelephone() {
-        return telephone;
+    public String getTelphone() {
+        return telphone;
     }
 
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
+    public void setTelphone(String telephone) {
+        this.telphone = telephone;
     }
 
     public String getIntroduce() {
@@ -112,7 +112,7 @@ public class User implements Serializable {
                 ", password='" + password + '\'' +
                 ", gender=" + gender +
                 ", email='" + email + '\'' +
-                ", telephone='" + telephone + '\'' +
+                ", telephone='" + telphone + '\'' +
                 ", introduce='" + introduce + '\'' +
                 ", activeCode='" + activeCode + '\'' +
                 ", state=" + state +

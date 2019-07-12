@@ -1,56 +1,69 @@
 package ylzl.web.servlet.client;
 
 
+import net.sf.json.JSONObject;
 import ylzl.domain.User;
 import ylzl.service.UserService;
 import ylzl.service.impl.UserServiceImpl;
 import ylzl.utils.EmailUtils;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletInputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URLDecoder;
+import java.util.Date;
 import java.util.UUID;
 
 @WebServlet(name = "RegisterServlet",
             urlPatterns = "/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
+        //利用Json接受数据
 
+        response.setContentType("application/json");
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
         HttpSession session = request.getSession();
-        String email = session.getAttribute("eamil").toString();
-        String u_name = session.getAttribute("u_name").toString();
-        String pwd = session.getAttribute("pwd").toString();
-        String sex = session.getAttribute("sex").toString();
-        String phone = session.getAttribute("phone").toString();
-        String description = session.getAttribute("description").toString();
+        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream(),"utf-8"));
+        StringBuffer sb = new StringBuffer("");
+        String line = null;
+        while ((line = br.readLine()) != null){
+            sb.append(line);
+
+        }
+
+        JSONObject json = JSONObject.fromObject(sb.toString());
+
+
         UserService userService = new UserServiceImpl();
-        User user = userService.findUserByUsername(u_name);
+        User r_user = (User)JSONObject.toBean(json,User.class);
+        User user = userService.findUserByUsername(r_user.getUsername());
+        String desc = r_user.getIntroduce();
         String info = null;
         if(user == null){
             /*插入数据库*/
-            User r_user = new User();
-            r_user.setEmail(email);
-            r_user.setUsername(u_name);
-            r_user.setGender(sex);
-            r_user.setRole("普通用户");
-            r_user.setState(false); //默认未激活且为普通用户
             String code = UUID.randomUUID().toString(); //生成checkcode
-            userService.insert(user);
+            r_user.setActiveCode(code);
+            r_user.setState(false);
+            r_user.setRegistTime(new Date());
+            r_user.setRole("普通用户");
+            userService.insert(r_user);
         }else{
             info = "用户已注册!";
         }
-        session.setAttribute("user",user);
-        EmailUtils.sendAccountActivateEmail(user);
+        session.setAttribute("user",r_user);
+        EmailUtils.sendAccountActivateEmail(r_user);
         session.setAttribute("message",info);
-        /**
-         * 跳转到登陆界面
-         */
-       // response.sendRedirect("/WEB-INF/");
+
+        response.sendRedirect(request.getContextPath() + "/");
+
 
     }
 

@@ -18,7 +18,7 @@
             		<a href="pages/cart.html">购物车</a> 
           | 		<a href="#">帮助中心</a> 
           | 		<a href="pages/myAccount.html">我的帐户</a>
-          | 		<a href="pages/register.html">新用户注册</a>                          
+          | 		<a href="register.jsp">新用户注册</a>
         
 			</div>
   		</div>

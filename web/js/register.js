@@ -6,7 +6,6 @@ $(function(){
 					}
 				});
 
-				$("input").val(" ");
 				$("#psw-com-pop").css("display","none");
 				$("#verifyingCode-pop").css("display","none");
 				$("#email").focus(function(){	
@@ -54,7 +53,7 @@ $(function(){
 					$("#psw-com").val("");
 					$("#psw-com-pop").css("display","none");
 				});
-				$("#changeCode").onclick(function(){
+				$("#changeCode").click(function(){
 					$.get("#",function(data,status){
 						if(status==404){
 							$("#code").val(data);
@@ -74,23 +73,25 @@ $(function(){
 						}
 					});
 				});
-				$("#submit").onclick(function(){
+				$("#submit").click(function(){
 					$(".pop").each(function(){
 						if($(this).css("display")=="block"){
 							alert("请确保字段填写正确");
 							return;
 						}
 					});
-					var username = $("#username").val();
-					var psw = $("psw").val();
-					var email = $("#email").val();
-					var phone = $("#phone").val();
-					var gender = $("input[name='gender']:checked").val();
-					var userData = {"username":username,"psw":psw,"email":email,"phone":phone,"gender":gender};
+					var username = $("#username").val().trim();
+					var psw = $("#psw").val().trim();
+					var email = $("#email").val().trim();
+					var phone = $("#phone").val().trim();
+					var gender = $("input[name='gender']:checked").val().trim();
+					var introduce = $("#self-introduction").val().trim();
+					var userData = {"username":username,"password":psw,"email":email,"phone":phone,"gender":gender,"introduce":introduce};
 					 $.ajax({
 					        type:"post",        //请求方式
-					        url:"#",    //请求URL地址
-					        data:userData,//请求的参数
+					        url:"RegisterServlet",    //请求URL地址
+						 	dataType:"json",
+					        data:JSON.stringify(userData),//请求的参数
 					        success:function(msg){  //成功时的处理函数，msg为服务端传回的文本
 					             
 					        }

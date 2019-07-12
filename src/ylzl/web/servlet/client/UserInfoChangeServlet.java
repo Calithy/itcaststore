@@ -25,7 +25,7 @@ public class UserInfoChangeServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String gender = request.getParameter("gender");
         user.setPassword(pwd);
-        user.setTelephone(phone);
+        user.setTelphone(phone);
         user.setGender(gender);
         UserService userService = new UserServiceImpl();
         int row = userService.update(user);

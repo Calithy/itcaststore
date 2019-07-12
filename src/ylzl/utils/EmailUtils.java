@@ -31,6 +31,7 @@ public class EmailUtils {
             message.setContent("<a target='_BLANK' href=''>" + GenerateLinkUtils.generateActivateLink(user) + "</a>" ,
                     "text/html;charset=utf-8");
             Transport.send(message);
+
         } catch (MessagingException e) {
             e.printStackTrace();
         }
@@ -50,7 +51,7 @@ public class EmailUtils {
         Session session = Session.getInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(FROM,"you19980721");
+                return new PasswordAuthentication(FROM,"li123456789");
             }
         });
         return session;
