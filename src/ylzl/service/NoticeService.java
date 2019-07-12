@@ -37,4 +37,11 @@ public interface NoticeService {
      * @return
      */
     public int update(Notice notice);
+
+    /**
+     * 删除一条公告
+     * @param id
+     * @return
+     */
+    public int delete(String id);
 }

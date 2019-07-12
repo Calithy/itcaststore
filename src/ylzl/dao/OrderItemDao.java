@@ -31,4 +31,19 @@ public interface OrderItemDao extends BaseDao<OrderItem> {
      * @return
      */
     public int delete(String id);
+
+    /**
+     * 通过OrderId以及ProductID查询订单项信息
+     * @param orderId
+     * @param productId
+     * @return
+     */
+    public List<OrderItem> getByOrderIdAndProductId(String orderId, String productId);
+
+    /**
+     * 通过orderID查询所有订单项
+     * @param orderId
+     * @return
+     */
+    public List<OrderItem> selectOrdersById(String orderId);
 }

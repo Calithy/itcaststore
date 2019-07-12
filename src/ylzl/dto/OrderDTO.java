@@ -1,7 +1,10 @@
 package ylzl.dto;
 
+import ylzl.domain.OrderItem;
+
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @program: itcaststore
@@ -19,6 +22,15 @@ public class OrderDTO implements Serializable {
     private Date ordertime;//订单时间
     private int userId;//所属用户ID
     private String userName;//所属用户姓名
+    private List<OrderItem> orderItemList; //订单详情
+
+    public List<OrderItem> getOrderItemList() {
+        return orderItemList;
+    }
+
+    public void setOrderItemList(List<OrderItem> orderItemList) {
+        this.orderItemList = orderItemList;
+    }
 
     public String getId() {
         return id;

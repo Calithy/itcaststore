@@ -1,6 +1,5 @@
 package ylzl.web.servlet.manager;
 
-import ylzl.dto.OrderDTO;
 import ylzl.service.OrderService;
 import ylzl.service.impl.OrderServiceImpl;
 
@@ -10,22 +9,31 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * @program: itcaststore
- * @description: 展示所有订单信息
+ * @description: 删除订单Servlet
  * @author: Leo
- * @create: 2019-07-10 09:07
+ * @create: 2019-07-12 14:24
  **/
-@WebServlet(name = "listOrder", urlPatterns = {"/listOrder"})
-public class ListOrderServlet extends HttpServlet {
+@WebServlet(name = "deleteOrder", urlPatterns = {"/deleteOrder"})
+public class DeleteOrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("id");
         OrderService orderService = new OrderServiceImpl();
-        List<OrderDTO> orderDTOS = orderService.listAllOrdersWithUserInfo();
-        req.setAttribute("orders",orderDTOS);
-        req.getRequestDispatcher("/admin/orderManage.jsp").forward(req,resp);
+        int delete = orderService.delOrderById(id);
+        //删除失败
+        if (delete <= 0){
+            //放入错误信息
+            req.setAttribute("message","删除订单失败");
+            req.getRequestDispatcher("/admin/OrderManage.jsp").forward(req,resp);
+        }
+        //删除成功
+        else {
+            //重定向得到列表页
+            resp.sendRedirect(req.getContextPath() + "/listOrder");
+        }
     }
 
     @Override

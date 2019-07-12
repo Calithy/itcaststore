@@ -34,4 +34,9 @@ public class NoticeServiceImpl implements NoticeService {
     public int update(Notice notice) {
         return noticeDao.update(notice);
     }
+
+    @Override
+    public int delete(String id) {
+        return noticeDao.delete(Integer.parseInt(id));
+    }
 }

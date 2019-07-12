@@ -107,6 +107,20 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
+    public OrderDTO getOrderByIdWithUserInfo(String id) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select o.id,o.money,o.receiverAddress,o.receiverName,o.receiverPhone,o.ordertime,o.paystate,u.username as userName,u.id as userId" +
+                " from orders as o left join user as u on o.user_id = u.id where o.id = ?";
+        OrderDTO orderDTO = null;
+        try {
+            orderDTO = qr.query(sql, new BeanHandler<>(OrderDTO.class),id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderDTO;
+    }
+
+    @Override
     public int delete(int id) {
         //不应调用此方法
         return -1;

@@ -75,7 +75,7 @@
 								<td>${product.pnum}</td>
 								<td>${product.category}</td>
 								<td><a href="${pageContext.request.contextPath}/editProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
-								<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+								<td><a href="${pageContext.request.contextPath}/deleteProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
