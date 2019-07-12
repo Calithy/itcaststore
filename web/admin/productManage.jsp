@@ -33,7 +33,7 @@
 							<td>类别：</td>
 							<td>
 								<select name="category" class="form-control">
-									<option value="" selected="selected">--选择商品类加--</option>
+									<option value="" selected="selected">--选择商品类别--</option>
 									<c:forEach items="${categories}" var="cate">
 										<option value="${cate}">${cate}</option>
 									</c:forEach>
@@ -75,7 +75,7 @@
 								<td>${product.pnum}</td>
 								<td>${product.category}</td>
 								<td><a href="${pageContext.request.contextPath}/editProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
-								<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+								<td><a href="${pageContext.request.contextPath}/deleteProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -87,7 +87,7 @@
 
 <script>
 	function addBtnClick(path) {
-		$(location).attr("href",path + "/admin/editProduct.jsp");
+		$(location).attr("href",path + "/editProduct");
 	}
 </script>
 </body>

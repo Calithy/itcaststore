@@ -206,6 +206,7 @@ public class ProductDaoImpl implements ProductDao {
         return ids;
     }
 
+
     @Override
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());

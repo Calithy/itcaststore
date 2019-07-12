@@ -46,6 +46,7 @@ public interface OrderDao extends BaseDao<Order> {
      */
     public OrderDTO getOrderByIdWithUserInfo(String id);
 
+
     /**
      * 通过条件查询
      * @param id 订单编号
@@ -53,4 +54,5 @@ public interface OrderDao extends BaseDao<Order> {
      * @return
      */
     public List<OrderDTO> selectByConditions(String id, String name);
+
 }

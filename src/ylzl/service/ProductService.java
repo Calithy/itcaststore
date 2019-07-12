@@ -74,6 +74,8 @@ public interface ProductService {
      * @return
      */
     public  List<Product> listProductWithPage(int pageNum, int pageSize);
+
+
     /**
      * 获取所有商品ID
      * @return
@@ -87,6 +89,7 @@ public interface ProductService {
      */
     public int update(Product product);
 
+
     /**
      * 通过多种条件组合查询
      * @param id
@@ -97,4 +100,5 @@ public interface ProductService {
      * @return
      */
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice);
+
 }

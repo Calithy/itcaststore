@@ -37,7 +37,7 @@
 								<td>${notice.details}</td>
 								<td>${notice.n_time}</td>
 								<td><a href="${pageContext.request.contextPath}/editNotice?id=${notice.n_id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
-								<td><a href="#"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+								<td><a href="${pageContext.request.contextPath}/deleteNotice?id=${notice.n_id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
