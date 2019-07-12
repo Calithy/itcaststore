@@ -4,11 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>我的账户</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>图书详情</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
      
-    
 	<!-- 新 Bootstrap4 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -24,45 +23,42 @@
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
+	<link rel="stylesheet" type="text/css" href="css/bookdetail.css" />
 </head>
 <body>
 	<%@include file="pages/header.jsp"%>
- 	<div class="container">
+	<div class="container">
 		<div class="myAccount">
 			<div class="row">
-				<div class="col-sm-8"></div>
-				<div class="col-sm-4">
+				<div class="col-sm-9"></div>
+				<div class="col-sm-3">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="#">首页</a></li>
-					  <li class="breadcrumb-item active"><b>我的账户</b></li>
-					  <li class="breadcrumb-item active">欢迎</li>
+					  <li class="breadcrumb-item"><a href="">首页</a></li>
+					  <li class="breadcrumb-item"><a href="">文学</a></li>
+					  <li class="breadcrumb-item active">学会宽容</li>
 					</ol>
 				</div>
 			</div>
-			<div class="row sider">
-				<div class="col-sm-1"></div>
-				<div class="col-sm-3">
-					<ul>
-						<li>
-							我的账户
-						</li>
-						<li>
-							<img src="images/icon1.png"><a href="alterInfo.jsp?id=${sessionScope.user.getId()}">用户信息修改</a>
-						</li>
-						<li>
-							<img src="images/icon2.png"><a href="orders.jsp">订单查询</a>
-						</li>
-						<li>
-							<img src="images/icon3.png"><a href="#">用户退出</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-8">
-					<div>
-						<img src="images/myad.jpg">
-					</div>
-				</div>
-			</div>
+			<div class="detail">
+			  	<img src="images/page_ad.jpg" class="img-top">
+			  	<div class="book clearfix">
+			  		<div class="book-img">
+			  			<img src="images/a2da626c-c72d-4972-83de-cf48405c5563.jpg">
+			  		</div>
+			  		<div class="des">
+			  			<img src="images/miniicon3.gif"><span class="title">学会宽容</span>
+			  			<hr>
+			  			售价：<span>￥25.0</span>
+			  			<hr>
+			  			<b>内容简介：</b><br>
+			  			<p>该书阐述了宽容是一种智慧和力量，是对生命的洞悉，是成长的绿荫，更是家庭幸福的秘诀。常用宽容的眼光看世界，事业、家庭和友谊才能稳固和长久。 </p>
+			  		</div>
+			  		<div class="buy-img">
+			  			<img src="images/buybutton.gif">
+			  		</div>
+			  		
+			  	</div>
+		 	</div>
 		</div>
 		
 	</div>

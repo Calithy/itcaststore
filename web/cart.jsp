@@ -4,11 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>我的账户</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>我的购物车</title>
+	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
      
-    
 	<!-- 新 Bootstrap4 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -24,44 +23,63 @@
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
+	<link rel="stylesheet" type="text/css" href="css/cart.css" />
 </head>
 <body>
 	<%@include file="pages/header.jsp"%>
- 	<div class="container">
+	<div class="container">
 		<div class="myAccount">
 			<div class="row">
-				<div class="col-sm-8"></div>
-				<div class="col-sm-4">
+				<div class="col-sm-9"></div>
+				<div class="col-sm-3">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="#">首页</a></li>
-					  <li class="breadcrumb-item active"><b>我的账户</b></li>
-					  <li class="breadcrumb-item active">欢迎</li>
+					  <li class="breadcrumb-item"><a href="">首页</a></li>
+					  <li class="breadcrumb-item active">购物车</li>
 					</ol>
 				</div>
 			</div>
-			<div class="row sider">
-				<div class="col-sm-1"></div>
-				<div class="col-sm-3">
-					<ul>
-						<li>
-							我的账户
-						</li>
-						<li>
-							<img src="images/icon1.png"><a href="alterInfo.jsp?id=${sessionScope.user.getId()}">用户信息修改</a>
-						</li>
-						<li>
-							<img src="images/icon2.png"><a href="orders.jsp">订单查询</a>
-						</li>
-						<li>
-							<img src="images/icon3.png"><a href="#">用户退出</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-8">
-					<div>
-						<img src="images/myad.jpg">
-					</div>
-				</div>
+			<div class="cart">
+			  
+		 		 <img src="images/page_ad.jpg" class="imgC"> 
+		 		 <img src="images/buy1.gif"> 
+		 	 
+			 	<table class="container-fluid">
+			 		<tr>
+			 			<td>序号</td>
+			 			<td>商品名称</td>
+			 			<td>价格</td>
+			 			<td>数量</td>
+			 			<td>库存</td>
+			 			<td>小计</td>
+			 			<td>取消</td>
+			 		</tr>
+			 		<tr>
+			 			<td>1</td>
+			 			<td>网管员必备宝典</td>
+			 			<td>20.0</td>
+			 			<td><input type="button" value="-" name="minus"><input type="text" name="amount"><input type="button" value="+" name="plus"></td>
+			 			<td>15</td>
+			 			<td>40.0</td>
+			 			<td><a href="">x</a></td>
+			 		</tr>
+			 		<tr>
+			 			<td></td>
+			 			<td></td>
+			 			<td></td>
+			 			<td> </td>
+			 			<td> </td>
+			 			<td> </td>
+			 			<td> 合计：40.0元</td>
+			 		</tr>
+			 	</table>
+			 	<div class="decide container-fluid clearfix">
+			 		<div class="img-float">
+			 			<a href=""  ><img src="images/gwc_jx.gif"></a>
+			 			<a href=""  ><img src="images/gwc_buy.gif"></a>
+			 		</div>
+			 		
+			 		
+			 	</div>
 			</div>
 		</div>
 		
