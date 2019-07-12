@@ -73,4 +73,21 @@ public interface ProductDao extends BaseDao<Product>{
 
 
 
+    /**
+     * 通过诸多条件查询
+     * @param id id
+     * @param name 名称
+     * @param category 分类
+     * @param minPrice 价格区间下限
+     * @param maxPrice 价格区间上限
+     * @return
+     */
+    public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice);
+
+    /**
+     * 获取所有id
+     * @return
+     */
+    public List<String> getAllIds();
+
 }

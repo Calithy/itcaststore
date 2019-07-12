@@ -16,7 +16,7 @@
 		<jsp:include page="left.jsp"/>
 		<div class="contentdiv2">
 			<div class="titlediv">查 询 条 件</div>
-			<form>
+			<form action="${pageContext.request.contextPath}/searchProduct" method="get">
 				<div class="container-fluid clearfix">
 					<table class="formTable">
 						<tr>
@@ -42,7 +42,7 @@
 						</tr>
 						<tr>
 							<td>价格区间（元）：</td>
-							<td><input type="text" class="form-control" name="name"><span style="float:left;">&nbsp;-&nbsp;</span><input type="text" class="form-control" name="name"></td>
+							<td><input type="number" class="form-control" name="minPrice"><span style="float:left;">&nbsp;-&nbsp;</span><input type="number" class="form-control" name="maxPrice"></td>
 						</tr>
 					</table>
 				</div>

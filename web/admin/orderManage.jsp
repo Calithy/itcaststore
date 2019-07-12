@@ -16,7 +16,7 @@
 		<%@include file="left.jsp" %>
 		<div class="contentdiv2">
 			<div class="titlediv">查 询 条 件</div>
-			<form>
+			<form action="${pageContext.request.contextPath}/searchOrder" method="get">
 				<div class="container-fluid clearfix">
 					<table class="formTable">
 						<tr>
@@ -27,7 +27,7 @@
 					<table class="formTable">
 						<tr>
 							<td>收件人：</td>
-							<td><input type="text" class="form-control" name="receiverName"></td>
+							<td><input type="text" class="form-control" name="name"></td>
 						</tr>
 					</table>
 				</div>

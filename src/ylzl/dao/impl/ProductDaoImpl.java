@@ -186,4 +186,80 @@ public class ProductDaoImpl implements ProductDao {
         return productList;
 
     }
+    @Override
+    public List<String> getAllIds() {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id from products";
+        List<String> ids = new ArrayList<>();
+        try {
+            List<Object[]> result = qr.query(sql, new ArrayListHandler());
+            //将查询出的ID放入list中
+            for (Object[] objects : result) {
+                if (objects != null && objects.length >= 1){
+                    if (objects[0] != null)
+                        ids.add(objects[0].toString());
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ids;
+    }
+
+    @Override
+    public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id,name,price,category,pnum,imgurl,description from products where ";
+        StringBuilder condition = new StringBuilder();
+        List<Object> params = new ArrayList<>();
+        //是否是第一个参数（sql拼接）
+        boolean first = true;
+        //id不为空
+        if (id != null && id.trim().length() > 0){
+            condition.append("id = ? ");
+            params.add(id);
+            first = false;
+        }
+        //name不为空
+        if (name != null && name.trim().length() > 0){
+            if (first){
+                condition.append("name = ?");
+                first = false;
+            }
+            else {
+                condition.append("and name = ? ");
+            }
+            params.add(name);
+        }
+        //category不为空
+        if (category != null && category.trim().length() > 0){
+            if (first){
+                condition.append("category = ? ");
+                first = false;
+            }
+            else {
+                condition.append("and category = ? ");
+            }
+            params.add(category);
+        }
+        //minPrice maxPrice合理
+        if (minPrice >=0 && maxPrice > 0 && maxPrice >= minPrice){
+            if (first){
+                condition.append("price between ? and ?");
+            }
+            else {
+                condition.append("and price between ? and ?");
+            }
+            params.add(minPrice);
+            params.add(maxPrice);
+        }
+        sql += condition.toString();
+        List<Product> productList = null;
+        try {
+            productList = qr.query(sql,new BeanListHandler<Product>(Product.class),params.toArray());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return productList;
+    }
 }

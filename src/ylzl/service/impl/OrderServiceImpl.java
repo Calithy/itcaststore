@@ -41,4 +41,13 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderDTO> listAllOrdersWithUserInfo() {
         return orderDao.selectAllOrdersWithUserInfo();
     }
+    @Override
+    public OrderDTO getOrderByIdWithUserInfo(String id) {
+        return orderDao.getOrderByIdWithUserInfo(id);
+    }
+
+    @Override
+    public List<OrderDTO> selectByConditions(String id, String name) {
+        return orderDao.selectByConditions(id,name);
+    }
 }

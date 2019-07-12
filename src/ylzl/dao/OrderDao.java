@@ -38,4 +38,19 @@ public interface OrderDao extends BaseDao<Order> {
      * @return
      */
     public List<OrderDTO> selectAllOrdersWithUserInfo();
+
+    /**
+     * 通过ID查询订单信息（包含用户信息）
+     * @param id
+     * @return
+     */
+    public OrderDTO getOrderByIdWithUserInfo(String id);
+
+    /**
+     * 通过条件查询
+     * @param id 订单编号
+     * @param name 收件人
+     * @return
+     */
+    public List<OrderDTO> selectByConditions(String id, String name);
 }
