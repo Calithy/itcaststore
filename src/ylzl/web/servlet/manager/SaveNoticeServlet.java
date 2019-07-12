@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @program: itcaststore
@@ -32,8 +33,8 @@ public class SaveNoticeServlet extends HttpServlet {
         String id = req.getParameter("id");
         Notice notice = new Notice();
         boolean add = false;
-        //ID为空, 添加
-        if (id == null || "".equals(id)){
+        //ID为空 添加
+        if (id == null || id.trim().length() <= 0){
             add = true;
         }
         //修改
@@ -48,8 +49,7 @@ public class SaveNoticeServlet extends HttpServlet {
         if (add){
             int insert = noticeService.insert(notice);
             if (insert <= 0){
-                //放入错误提示信息
-                req.setAttribute("message","添加公告信息失败");
+                req.setAttribute("message","添加公告失败");
                 req.getRequestDispatcher("/admin/editNotice.jsp").forward(req,resp);
             }
         }
@@ -57,7 +57,7 @@ public class SaveNoticeServlet extends HttpServlet {
             int update = noticeService.update(notice);
             if (update <= 0){
                 //放入错误提示信息
-                req.setAttribute("message","修改公告信息失败");
+                req.setAttribute("message","修改公告失败");
                 req.getRequestDispatcher("/admin/editNotice.jsp").forward(req,resp);
             }
         }

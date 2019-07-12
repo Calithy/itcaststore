@@ -8,7 +8,11 @@ import java.io.IOException;
  * @program: itcaststore
  * @description: 编码过滤器
  * @author: Leo
+<<<<<<< HEAD
  * @create: 2019-07-12 09:32
+=======
+ * @create: 2019-07-12 16:59
+>>>>>>> commit
  **/
 @WebFilter(filterName = "encodingFilter", urlPatterns = {"/*"})
 public class EncodingFilter implements Filter {
@@ -21,7 +25,10 @@ public class EncodingFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         servletRequest.setCharacterEncoding("utf-8");
         servletResponse.setCharacterEncoding("utf-8");
+<<<<<<< HEAD
         //servletResponse.setContentType("text/html;charset=utf-8");
+=======
+>>>>>>> commit
         filterChain.doFilter(servletRequest, servletResponse);
     }
 

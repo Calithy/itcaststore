@@ -39,7 +39,7 @@
 						<td>
 							<select name="category" class="form-control">
                                 <c:if test="${product == null}">
-                                    <option value="请选择商品类别">请选择商品类别</option>
+                                    <option value="">请选择商品类别</option>
                                 </c:if>
                                 <c:if test="${product != null}">
                                     <option value="${product.category}">${product.category}</option>
@@ -53,7 +53,7 @@
 					<tr>
 						<td>商品图片：</td>
 						<td colSpan="3">
-							<input type="file" name="upload" size="30" value="${product.imgurl}"/></td>
+							<input type="file" name="imgurl" size="30" value="${product.imgurl}"/></td>
 					</tr>
 					<tr>
 						<td>商品描述：</td>
