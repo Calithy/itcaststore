@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "UserInfoChangeServlet")
+@WebServlet(name = "UserInfoChangeServlet",
+            urlPatterns = "/UserInfoChangeServlet")
 public class UserInfoChangeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
@@ -20,20 +21,27 @@ public class UserInfoChangeServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        User user = (User)session.getAttribute("user");
-        String pwd = request.getParameter("pwd");
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        UserService userService = new UserServiceImpl();
+        String username = request.getParameter("username");
+        String pwd = request.getParameter("password");
         String phone = request.getParameter("phone");
         String gender = request.getParameter("gender");
-        user.setPassword(pwd);
-        user.setTelphone(phone);
-        user.setGender(gender);
-        UserService userService = new UserServiceImpl();
+        User user = userService.findUserByUsername(username);
+        System.out.println(pwd + phone + gender);
+        if(!pwd.isEmpty() && !phone.isEmpty()){
+            user.setPassword(pwd);
+            user.setTelphone(phone);
+            user.setGender(gender);
+        }
+
         int row = userService.update(user);
         if(row != 0){
             response.sendRedirect("成功修改页面");
         }else{
-            /*
-            * 提示修改失败*/
+           request.setAttribute("message","修改失败!");
+           request.getRequestDispatcher("alterinfo.jsp").forward(request,response);
         }
 
 

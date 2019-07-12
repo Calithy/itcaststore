@@ -2,13 +2,13 @@ package ylzl.web.servlet.client;
 
 
 import net.sf.json.JSONObject;
+import net.sf.json.processors.JsonBeanProcessor;
 import ylzl.domain.User;
 import ylzl.service.UserService;
 import ylzl.service.impl.UserServiceImpl;
 import ylzl.utils.EmailUtils;
 
-import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
+import javax.servlet.ServletException;;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URLDecoder;
+import java.io.PrintWriter;
 import java.util.Date;
 import java.util.UUID;
 
@@ -38,10 +38,8 @@ public class RegisterServlet extends HttpServlet {
             sb.append(line);
 
         }
-
+        br.close();
         JSONObject json = JSONObject.fromObject(sb.toString());
-
-
         UserService userService = new UserServiceImpl();
         User r_user = (User)JSONObject.toBean(json,User.class);
         User user = userService.findUserByUsername(r_user.getUsername());
@@ -58,11 +56,15 @@ public class RegisterServlet extends HttpServlet {
         }else{
             info = "用户已注册!";
         }
-        session.setAttribute("user",r_user);
         EmailUtils.sendAccountActivateEmail(r_user);
-        session.setAttribute("message",info);
-
-        response.sendRedirect(request.getContextPath() + "/");
+        String infoJson = "{\"res_info\": "+info +"}";
+        String jsonUser = JSONObject.fromObject(user).toString();
+        PrintWriter out = response.getWriter();
+        out.println(infoJson);
+        out.println(jsonUser);
+        out.flush();
+        response.setHeader("redirectUrl",request.getContextPath() + "/myAccount.jsp");
+        response.setHeader("enableRedirect","true");
 
 
     }

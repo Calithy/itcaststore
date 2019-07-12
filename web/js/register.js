@@ -86,7 +86,7 @@ $(function(){
 					var phone = $("#phone").val().trim();
 					var gender = $("input[name='gender']:checked").val().trim();
 					var introduce = $("#self-introduction").val().trim();
-					var userData = {"username":username,"password":psw,"email":email,"phone":phone,"gender":gender,"introduce":introduce};
+					var userData = {"username":username,"password":psw,"email":email,"telphone":phone,"gender":gender,"introduce":introduce};
 					 $.ajax({
 					        type:"post",        //请求方式
 					        url:"RegisterServlet",    //请求URL地址
@@ -96,6 +96,19 @@ $(function(){
 					             
 					        }
    					 });
+
+					$(document).ajaxComplete(function(event, xhr, settings){
+						console.log("complete");
+						var url = xhr.getResponseHeader("redirectUrl");
+						var enable = xhr.getResponseHeader("enableRedirect");
+						if((enable == "true") && (url != "")){
+							var win = window;
+							while (win != win.top){
+								win = win.top;
+							}
+							win.location.href = url;
+						}
+					});
 				});
 		});
 		
