@@ -74,4 +74,17 @@ public interface ProductService {
      * @return
      */
     public  List<Product> listProductWithPage(int pageNum, int pageSize);
+
+    /**
+     * 获取所有商品ID
+     * @return
+     */
+    public List<String> listAllIds();
+
+    /**
+     * 更新商品信息
+     * @param product
+     * @return
+     */
+    public int update(Product product);
 }

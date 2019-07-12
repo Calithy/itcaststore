@@ -186,4 +186,24 @@ public class ProductDaoImpl implements ProductDao {
         return productList;
 
     }
+
+    @Override
+    public List<String> getAllIds() {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select id from products";
+        List<String> ids = new ArrayList<>();
+        try {
+            List<Object[]> result = qr.query(sql, new ArrayListHandler());
+            //将查询出的ID放入list中
+            for (Object[] objects : result) {
+                if (objects != null && objects.length >= 1){
+                    if (objects[0] != null)
+                        ids.add(objects[0].toString());
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ids;
+    }
 }

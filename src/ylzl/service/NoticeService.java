@@ -23,4 +23,18 @@ public interface NoticeService {
      * @return
      */
     public Notice getById(String id);
+
+    /**
+     * 插入一条公告
+     * @param notice
+     * @return
+     */
+    public int insert(Notice notice);
+
+    /**
+     * 更新一条公告
+     * @param notice
+     * @return
+     */
+    public int update(Notice notice);
 }
