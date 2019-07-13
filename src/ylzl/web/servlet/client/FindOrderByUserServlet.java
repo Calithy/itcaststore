@@ -25,10 +25,9 @@ public class FindOrderByUserServlet extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
 
         OrderService orderService = new OrderServiceImpl();
-        List<Order> orderList = orderService.getOrderByUserId(user.getId());
+        List<Order> orderList = orderService.findOrderByUserId(user.getId());
         request.setAttribute("orders",orderList);
         request.getRequestDispatcher("/orders.jsp").forward(request,response);
-
-
+        
     }
 }

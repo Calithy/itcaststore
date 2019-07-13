@@ -56,4 +56,11 @@ public interface OrderService {
      * @return
      */
     public List<OrderDTO> selectByConditions(String id, String name);
+
+    /**
+     * 通过用户id查询
+     * @param id
+     * @return
+     */
+    public  List<Order> findOrderByUserId(int id);
 }

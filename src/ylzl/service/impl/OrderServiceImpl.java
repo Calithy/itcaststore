@@ -50,4 +50,9 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderDTO> selectByConditions(String id, String name) {
         return orderDao.selectByConditions(id,name);
     }
+
+    @Override
+    public List<Order> findOrderByUserId(int id) {
+        return orderDao.getByUserId(id);
+    }
 }
