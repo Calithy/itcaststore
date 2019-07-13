@@ -55,5 +55,5 @@ public interface OrderService {
      * @param name 收件人
      * @return
      */
-
+    public List<OrderDTO> selectByConditions(String id, String name);
 }

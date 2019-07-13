@@ -49,7 +49,7 @@
 	<jsp:include page="footer.jsp"/>
 <script>
 	function addNotice(path) {
-		$(location).attr("href",path + "/admin/editNotice.jsp");
+		$(location).attr("href",path + "/editNotice");
 	}
 </script>
 </body>

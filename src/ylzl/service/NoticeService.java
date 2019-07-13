@@ -25,21 +25,21 @@ public interface NoticeService {
     public Notice getById(String id);
 
     /**
-     * 插入一条公告
+     * 添加
      * @param notice
      * @return
      */
     public int insert(Notice notice);
 
     /**
-     * 更新一条公告
+     * 修改
      * @param notice
      * @return
      */
     public int update(Notice notice);
 
     /**
-     * 删除一条公告
+     * 删除
      * @param id
      * @return
      */
