@@ -2,6 +2,7 @@ package ylzl.service;
 
 
 import ylzl.domain.OrderItem;
+import ylzl.dto.OrderItemDTO;
 
 import java.util.List;
 
@@ -33,4 +34,6 @@ public interface OrderItemService {
      * @return
      */
     public List<OrderItem> selectAllById(String orderId);
+
+    public List<OrderItemDTO> getOrderItemByOderId(String orderId,int userId);
 }

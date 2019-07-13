@@ -46,15 +46,15 @@
 			  			<img src="images/a2da626c-c72d-4972-83de-cf48405c5563.jpg">
 			  		</div>
 			  		<div class="des">
-			  			<img src="images/miniicon3.gif"><span class="title">学会宽容</span>
+			  			<img src="images/${product.imgurl}"><span class="title">${product.name}</span>
 			  			<hr>
-			  			售价：<span>￥25.0</span>
+			  			售价：<span>${product.price}</span>
 			  			<hr>
 			  			<b>内容简介：</b><br>
-			  			<p>该书阐述了宽容是一种智慧和力量，是对生命的洞悉，是成长的绿荫，更是家庭幸福的秘诀。常用宽容的眼光看世界，事业、家庭和友谊才能稳固和长久。 </p>
+			  			<p>${product.description}</p>
 			  		</div>
 			  		<div class="buy-img">
-			  			<img src="images/buybutton.gif">
+			  			<a href="${pageContext.request.contextPath}/AddCartServlet?id=${product.id}"><img src="images/buybutton.gif"></a>
 			  		</div>
 			  		
 			  	</div>

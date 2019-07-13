@@ -3,6 +3,7 @@ package ylzl.service.impl;
 import ylzl.dao.OrderItemDao;
 import ylzl.dao.impl.OrderItemDaoImpl;
 import ylzl.domain.OrderItem;
+import ylzl.dto.OrderItemDTO;
 import ylzl.service.OrderItemService;
 
 import java.util.List;
@@ -27,5 +28,10 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Override
     public List<OrderItem> selectAllById(String orderId) {
         return orderItemDao.selectOrdersById(orderId);
+    }
+
+    @Override
+    public List<OrderItemDTO> getOrderItemByOderId(String orderId,int userid) {
+        return orderItemDao.selectOrderItemById(orderId,userid);
     }
 }

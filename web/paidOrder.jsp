@@ -81,23 +81,21 @@
 							<td>数量  </td>
 							<td>小计  </td>
 						</tr>
-						<c:forEach items="${orders}" var="item" varStatus="status">
+
+						<c:forEach items="${orderItems}" var="item"  varStatus="xh">
+
 							<tr>
-								<td>${item}</td>
-								<td>${item.receiverName}</td>
-								<td>${item.money}</td>
-								<td>${item}</td>
-								<td>${item.money}</td>
+								<td>${xh.count}</td>
+								<td>${item.name}</td>
+								<td>${item.price}</td>
+								<td>${item.buynum}</td>
+								<td>${item.price * item.buynum}</td>
 							</tr>
+
 						</c:forEach>
+
 						<tr>
-							<td>
-								1 			 		
-							</td>
-							<td>培育男孩 </td>
-							<td>59.0   </td>
-							<td>1  </td>
-							<td>59.0  </td>
+
 						</tr>
 						<tr>
 							<td>
@@ -106,13 +104,13 @@
 							<td>   </td>
 							<td>  </td>
 							<td>  </td>
-							<td> 合计：  59.0 </td>
+							<td> ${orderMoney} </td>
 
 						</tr>
 					</table>
-					收货地址：北京市昌平区建材城西路金燕龙办公楼 <br>   
-					收货人：    huangyun     <br>   
-					联系方式：13041019968     <br>    
+					收货地址：${orderItems[0].receiverAddress} <br>
+					收货人：  ${orderItems[0].receiverName}   <br>
+					联系方式：${orderItems[0].receiverPhone}    <br>
 					<hr>
 				</div>
 				<div class="row pay">

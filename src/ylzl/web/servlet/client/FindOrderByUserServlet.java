@@ -23,11 +23,10 @@ public class FindOrderByUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         User user = (User) request.getSession().getAttribute("user");
-
         OrderService orderService = new OrderServiceImpl();
         List<Order> orderList = orderService.findOrderByUserId(user.getId());
         request.setAttribute("orders",orderList);
         request.getRequestDispatcher("/orders.jsp").forward(request,response);
-        
+
     }
 }

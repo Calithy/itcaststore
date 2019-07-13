@@ -51,45 +51,38 @@
 				</div>
 				
 				<table class="col-md-12">
-					<tr>
-						<td>
-							<div class="img-shadow">
-								<img src="images/timg.jfif">
-							</div>
-							<a href="#">数据库教程<br>售价：45元</a>
-						</td>
-						<td>
-							<div class="img-shadow">
-								<img src="images/timg.jfif">
-							</div>
-							<a href="#">数据库教程<br>售价：45元</a>
-						</td>
-						<td>
-							<div class="img-shadow">
-								<img src="images/timg.jfif">
-							</div>
-							<a href="#">数据库教程<br>售价：45元</a>
-						</td>
-						<td>
-							<div class="img-shadow">
-								<img src="images/timg.jfif">
-							</div>
-							<a href="#">数据库教程<br>售价：45元</a>
-						</td>
-					</tr>
+                    <tr>
+                        <c:forEach items="${pageBean.list}" var="book">
+                            <td>
+                                <div class="img-shadow">
+                                    <img src="images/${book.imgurl}">
+                                </div>
+                                <a href="${pageContext.request.contextPath}/FindProductByIdServlet?id=${book.id}">${book.name}<br>售价：${book.price}元</a>
+                            </td>
+                        </c:forEach>
+                    </tr>
 				</table>
 				<div class="container-fluid pagebtn">
 					<ul>
-						<li><a href=""><img src="images/previous_page2.png"></a></li>
-						<li class="active"><a href="">1</a></li>
-						<li><a href="">2</a></li>
-						<li><a href="">3</a></li>
-						<li><a href=""><img src="images/next_page.png"></a></li>
+						<c:if test="${pageBean.pageNum != 1}">
+							<li><a href="${pageContext.request.contextPath}/ShowAllProductsServlet?pageNum=${pageBean.pageNum - 1}"><img src="images/previous_page2.png"></a></li>
+						</c:if>
+						<c:if test="${pageBean.pageNum == 1}">
+							<li><a href="${pageContext.request.contextPath}/ShowAllProductsServlet?pageNum=${pageBean.pageNum}"><img src="images/previous_page2.png"></a></li>
+						</c:if>
+						<c:forEach begin="${pageBean.startPage}" end="${pageBean.endPage}" var="cuurent">
+							<li class="active"><a href="">${cuurent}</a></li>
+						</c:forEach>
+						<c:if test="${pageBean.pageNum == pageBean.totalPage}">
+							<li><a href="${pageContext.request.contextPath}/ShowAllProductsServlet?pageNum=${pageBean.pageNum}"><img src="images/next_page.png"></a></li>
+						</c:if>
+						<c:if test="${pageBean.pageNum != pageBean.totalPage}">
+							<li><a href="${pageContext.request.contextPath}/ShowAllProductsServlet?pageNum=${pageBean.pageNum + 1}"><img src="images/next_page.png"></a></li>
+						</c:if>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<%@include file="pages/footer.jsp"%>
 </body>

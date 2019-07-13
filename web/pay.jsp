@@ -50,9 +50,9 @@
 					<table>
 						<tr>
 							<td>订单号：</td>
-							<td><input type="text" name="orderId" class="form-control" placeholder="305a7870-3820-4079-b6f9-5d2b63cbcd2a"/></td>
+							<td><input type="text" name="orderId" class="form-control" value="${param.orderid}"/></td>
 							<td>支付金额：</td>
-							<td><input type="text" name="money" class="form-control" placeholder="59.0" style="float:left"/>元</td>
+							<td><input type="text" name="money" class="form-control" value="${param.money}" style="float:left"/>元</td>
 						</tr>
 						<tr>
 							<td>选择网上银行：</td>
@@ -94,7 +94,7 @@
 							<td><input type="radio" name="yh" value="CZ-NET-B2C"/><img src="images/zheshang.bmp"/></td>
 						</tr>
 					</table>
-					<div class="container-fluid" style="text-align: center;"><a href="findOrderByUser.jsp"><button type="button">确认支付</button></a></div>
+					<div class="container-fluid" style="text-align: center;"><a href="${pageContext.request.contextPath}/PayServlet?order=${param.orderid}&&money=${param.money}"><button type="button">确认支付</button></a></div>
 				</div>
 			</div>
 		</div>

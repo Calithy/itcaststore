@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> listAllProductsByStr(String str) { return  productDao.findByStr(str); }
 
     @Override
-    public List<Product> findAllProductBynameWithPage(int pageNum, int pageSize,String f_name) {
+    public PageBean findAllProductBynameWithPage(int pageNum, int pageSize,String f_name) {
         List<Product> productList = productDao.findByStr(f_name);
         int totalRecord = productList.size(); //总的记录条数
         PageBean pageBean = new PageBean(pageNum, pageSize, totalRecord);
@@ -53,11 +53,11 @@ public class ProductServiceImpl implements ProductService {
 
         productList = productDao.findBynameAndIndexRange(startIndex, pageSize, f_name);
         pageBean.setList(productList);
-        return productList;
+        return pageBean;
     }
 
     @Override
-    public List<Product> findProductByCategoryWithPage(int pageNum, int pageSize, String category) {
+    public PageBean findProductByCategoryWithPage(int pageNum, int pageSize, String category) {
         List<Product> productList = productDao.findByCategory(category);
         int totalRecord = productList.size(); //某一类别的书籍的总数量
         PageBean pageBean = new PageBean(pageNum,pageSize,totalRecord);
@@ -66,11 +66,11 @@ public class ProductServiceImpl implements ProductService {
 
         productList = productDao.findByCategoryWithPage(category,startIndex,pageSize);
         pageBean.setList(productList);
-        return productList;
+        return pageBean;
     }
 
     @Override
-    public List<Product> listProductWithPage(int pageNum, int pageSize) {
+    public PageBean listProductWithPage(int pageNum, int pageSize) {
         List<Product> productList = listAllProducts();
         int totalRecord = productList.size(); //某一类别的书籍的总数量
         PageBean pageBean = new PageBean(pageNum,pageSize,totalRecord);
@@ -79,7 +79,7 @@ public class ProductServiceImpl implements ProductService {
 
         productList = productDao.findProductsWithPage(startIndex,pageSize);
         pageBean.setList(productList);
-        return productList;
+        return pageBean;
     }
     @Override
     public List<String> listAllIds() {

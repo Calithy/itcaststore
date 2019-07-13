@@ -24,6 +24,27 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
 	<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	<script>
+
+		function changeProductNum(count, totalCount, id) {
+			count = parseInt(count);
+			totalCount = parseInt(totalCount);
+			//如果数量为0，判断是否要删除商品
+			if (count == 0) {
+				var flag = window.confirm("确认删除商品吗?");
+
+				if (!flag) {
+					count = 1;
+				}
+			}
+			if (count > totalCount) {
+				alert("已达到商品最大购买量");
+				count = totalCount;
+			}
+			location.href = "${pageContext.request.contextPath}/ChangeServlet?id="
+					+ id + "&count=" + count;
+		}
+	</script>
 </head>
 <body>
 	<%@include file="pages/header.jsp"%>
@@ -53,15 +74,20 @@
 			 			<td>小计</td>
 			 			<td>取消</td>
 			 		</tr>
-			 		<tr>
-			 			<td>1</td>
-			 			<td>网管员必备宝典</td>
-			 			<td>20.0</td>
-			 			<td><input type="button" value="-" name="minus"><input type="text" name="amount"><input type="button" value="+" name="plus"></td>
-			 			<td>15</td>
-			 			<td>40.0</td>
-			 			<td><a href="">x</a></td>
-			 		</tr>
+					<c:forEach items="${cart}" var="product" varStatus="xh">
+						<tr>
+							<td>${xh.count}</td>
+							<td>${product.key.name}</td>
+							<td>${product.key.price}</td>
+							<td><input type="button" value="-" name="minus" onclick="changeProductNum('${product.value-1}','${product.key.pnum}','${product.key.id}')">
+								<input type="text" name="amount" value="${product.value}">
+								<input type="button" value="+" name="plus" onclick="changeProductNum('${product.value+1}','${product.key.pnum}','${product.key.id}')"></td>
+							<td>${product.key.pnum}</td>
+							<td>${product.key.price*product.value}</td>
+							<td><a href="">x</a></td>
+						</tr>
+					</c:forEach>
+
 			 		<tr>
 			 			<td></td>
 			 			<td></td>

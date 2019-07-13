@@ -5,7 +5,7 @@
   		<div class="row">
   			
 			<div class="col-sm-3">
-				<a href="index.html">
+				<a href="index.jsp">
             		<img src="images/logo.png" width="200" height="60" border="0" /> 
           		</a>
 			</div>
@@ -16,7 +16,7 @@
 			<div class="col-sm-4">
 				 <img src="images/cart.gif" width="26" height="23" style="margin-bottom:-4px" />
              		&nbsp;
-            		<a href="pages/cart.html">购物车</a> 
+            		<a href="cart.jsp">购物车</a>
           | 		<a href="#">帮助中心</a>
 				<%
 					User user = (User)session.getAttribute("user");
@@ -96,7 +96,7 @@
 					      <a class="nav-link color-white" href="#">生活百科</a>
 					    </li>
 					    <li class="nav-item">
-					      <a class="nav-link color-white" href="#" style="color:#b4d76d">全部商品目录</a>
+					      <a class="nav-link color-white" href="${pageContext.request.contextPath}/ShowAllProductsServlet" style="color:#b4d76d">全部商品目录</a>
 					    </li>
 					  </ul>
 			 

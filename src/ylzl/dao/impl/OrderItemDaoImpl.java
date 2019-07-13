@@ -5,6 +5,7 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import ylzl.dao.OrderItemDao;
 import ylzl.domain.OrderItem;
+import ylzl.dto.OrderItemDTO;
 import ylzl.utils.C3P0Utils;
 
 import java.sql.SQLException;
@@ -120,6 +121,25 @@ public class OrderItemDaoImpl implements OrderItemDao {
             e.printStackTrace();
         }
         return orderItems;
+    }
+
+    @Override
+    public List<OrderItemDTO> selectOrderItemById(String orderId,int userId) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "select o.receiverAddress,o.receiverName,o.receiverPhone,o.paystate,o.ordertime,o.user_id,p.id,p.`name`,p.price,orderitem.buynum " +
+                "from  products as p JOIN orderitem  ON orderitem.product_id = p.id" +
+                " JOIN orders as o on o.id = orderitem.order_id " +
+                "WHERE o.user_id = ? " +
+                "AND orderitem.order_id = ?";
+        List<OrderItemDTO> orderItemDTOList = null;
+        try {
+            orderItemDTOList = qr.query(sql,new BeanListHandler<OrderItemDTO>(OrderItemDTO.class),userId,orderId);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return orderItemDTOList;
+
     }
 
     @Override
