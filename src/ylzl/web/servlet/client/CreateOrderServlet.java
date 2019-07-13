@@ -53,7 +53,7 @@ public class CreateOrderServlet extends HttpServlet {
 
         OrderService orderService = new OrderServiceImpl();
         orderService.insert(order);
-
+        session.setAttribute("orderId",order.getId());
         /**
          * 跳转到订单创建成功页面
          */

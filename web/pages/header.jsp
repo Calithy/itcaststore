@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="ylzl.domain.User" %>
 <div class="container space">
 
   		<div class="row">
@@ -16,14 +17,31 @@
 				 <img src="images/cart.gif" width="26" height="23" style="margin-bottom:-4px" />
              		&nbsp;
             		<a href="pages/cart.html">购物车</a> 
-          | 		<a href="#">帮助中心</a> 
+          | 		<a href="#">帮助中心</a>
+				<%
+					User user = (User)session.getAttribute("user");
+					if(user == null){
+				%>
           | 		<a href="account.jsp">我的帐户</a>
+				<%}else{%>
+					<a href="myAccount.jsp">我的帐户</a>
+				<%}%>
           | 		<a href="register.jsp">新用户注册</a>
-        
+				    <div class="row">
+						<div class="col-sm-5"></div>
+						<div class="col-sm-7">
+							<%
+								if (user != null){
+							%>
+							<p class="title" style="color: darkred">欢迎 ${sessionScope.user.getUsername()}</p>
+							<%}%>
+						</div>
+					</div>
 			</div>
   		</div>
   	</div>
 	<div class="container space">
+
 		<div class="row">
 			<div class="col-sm-12">
 				<nav class="bg-green navbar-expand-sm"></nav>

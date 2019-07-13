@@ -59,6 +59,9 @@
 				</div>
 				<div class="col-sm-8">
 					<div class="orders">
+						<%
+							request.getAttribute("orders");
+						%>
 						<span class="title">我的订单</span><br><br>共有<span style="color:red;">1</span>订单
 						<table>
 							<tr>
@@ -68,16 +71,26 @@
 								<td style="background-color: #A3B6E6;">状态</td>
 								<td style="background-color: #A3E2E6;">操作</td>
 							</tr>
-							<tr>
-								<td>305a7870-3820-4079-b6f9-5d2b63cbcd2a</td>
-								<td>huangyun</td>
-								<td>2016-01-13</td>
-								<td>未支付</td>
-								<td>
-									<a href="order.html">查看</a>
-									<a href="#">删除</a>
-								</td>
-							</tr>
+							<c:forEach items="${orders}" var="item" varStatus="status">
+								<tr>
+									<td>${item.id}</td>
+									<td>${item.receiverName}</td>
+									<td>${item.ordertime}</td>
+
+									<c:if test="${item.paystate == 0}">
+										<td>未支付</td>
+									</c:if>
+									<c:if test="${item.paystate == 1}">
+										<td>支付</td>
+									</c:if>
+
+									<td>
+									<a href="${pageContext.request.contextPath}/FindOrderByIdServlet?orderid=${item.id}&&type=${item.paystate}">查看</a>
+										<a href="#">删除</a>
+									</td>
+								</tr>
+							</c:forEach>
+
 						</table>
 					</div>
 				</div>

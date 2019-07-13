@@ -45,6 +45,7 @@ public class LoginServlet extends HttpServlet {
         String pwd = l_user.getPassword();
         User user = userService.findUserByUsername(l_user.getUsername());
         String login_info =  null;
+        session.setAttribute("user",user);
         if(user == null){
             login_info = "账号未注册，请先注册!";
         }else{
@@ -68,7 +69,7 @@ public class LoginServlet extends HttpServlet {
         /*
             返回json数据
         * */
-        session.setAttribute("user",user);
+
         String infoJson = "{\"login_info\": "+login_info +"}";
         PrintWriter out = response.getWriter();
         out.println(infoJson);

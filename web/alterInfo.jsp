@@ -84,10 +84,10 @@
 							<img src="images/icon1.png"><a href="#">用户信息修改</a>
 						</li>
 						<li>
-							<img src="images/icon2.png"><a href="#">订单查询</a>
+							<img src="images/icon2.png"><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a>
 						</li>
 						<li>
-							<img src="images/icon3.png"><a href="index.jsp">用户退出</a>
+							<img src="images/icon3.png"><a href="${pageContext.request.contextPath}/LogoutServlet">用户退出</a>
 						</li>
 					</ul>
 				</div>
@@ -97,11 +97,11 @@
 								<table>
 									<tr>
 										<td>会员邮箱</td>
-										<td> <input type="text" id="email" name="email" class="form-control" value="calithy666@gmail.com" readonly ></td>
+										<td> <input type="text" id="email" name="email" class="form-control" value="${sessionScope.user.getEmail()}" readonly ></td>
 									</tr>
 									<tr>
 										<td>会员名</td>
-										<td><input type="text" id="username" name = "username" class="form-control" value="lo" readonly></td>
+										<td><input type="text" id="username" name = "username" class="form-control" value="${sessionScope.user.getUsername()}" readonly></td>
 									</tr>
 									<tr>
 										<td>修改密码</td>
@@ -115,14 +115,14 @@
 									</tr>
 									<tr>
 										<td>性别</td>
-										<td> <input type="radio" name="gender" value="男" checked="">男
+										<td> <input type="radio" name="gender" value="男" checked="checked">男
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 											<input type="radio" name="gender"  value="女"  >女
 										</td>
 									</tr>
 									<tr>
 										<td>联系方式</td>
-										<td> <input type="text" name="phone" id="phone" class="form-control" value="13041019968" /></td>
+										<td> <input type="text" name="phone" id="phone" class="form-control" value="${sessionScope.user.getTelphone()}" /></td>
 									</tr>
 									<tr>
 										<td> </td>

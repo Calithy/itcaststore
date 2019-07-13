@@ -72,12 +72,6 @@ public interface ProductDao extends BaseDao<Product>{
     public  List<Product> findProductsWithPage(int startIndex, int pageSize);
 
     /**
-     * 获取所有商品ID
-     * @return
-     */
-    public List<String> getAllIds();
-
-    /**
      * 通过诸多条件查询
      * @param id id
      * @param name 名称
@@ -87,11 +81,5 @@ public interface ProductDao extends BaseDao<Product>{
      * @return
      */
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice);
-
-    /**
-     * 获取所有id
-     * @return
-     */
-    public List<String> getAllIds();
 
 }

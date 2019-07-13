@@ -50,10 +50,10 @@
 							<img src="images/icon1.png"><a href="alterInfo.jsp?id=${sessionScope.user.getId()}">用户信息修改</a>
 						</li>
 						<li>
-							<img src="images/icon2.png"><a href="orders.jsp">订单查询</a>
+							<img src="images/icon2.png"><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a>
 						</li>
 						<li>
-							<img src="images/icon3.png"><a href="#">用户退出</a>
+							<img src="images/icon3.png"><a href="${pageContext.request.contextPath}/LogoutServlet">用户退出</a>
 						</li>
 					</ul>
 				</div>

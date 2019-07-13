@@ -24,14 +24,16 @@ public class FindOrderByIdServlet extends HttpServlet {
 
         OrderService orderService = new OrderServiceImpl();
         Order order = orderService.getOrderById(orderid);
-        boolean state = false;
+        System.out.println(type);
+        int state = 0;
         if(!type.isEmpty()){
-            state = Boolean.parseBoolean(type); //支付状态
+            state = Integer.parseInt(type); //支付状态
         }
-        if(state){
-            request.getRequestDispatcher("查看页面").forward(request,response);
+        if(state == 1){
+           // F:\itcaststore\web\paidOrder.jsp
+            request.getRequestDispatcher("paidOrder.jsp").forward(request,response);
         }else{
-            request.getRequestDispatcher("支付页面").forward(request,response);
+            request.getRequestDispatcher("order.jsp").forward(request,response);
         }
     }
 }
