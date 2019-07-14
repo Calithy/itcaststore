@@ -21,10 +21,14 @@ import java.io.IOException;
 public class EditNoticeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
         NoticeService noticeService = new NoticeServiceImpl();
-        Notice notice = noticeService.getById(id);
-        req.setAttribute("notice",notice);
+        String id = req.getParameter("id");
+        if (id != null && id.trim().length() > 0){
+            //查询公告信息
+            Notice notice = noticeService.getById(id);
+            //加入request域
+            req.setAttribute("notice",notice);
+        }
         req.getRequestDispatcher("/admin/editNotice.jsp").forward(req,resp);
     }
 

@@ -15,7 +15,7 @@
 		<%@include file="left.jsp" %>
 		<div class="contentdiv1">
 			<div class="container-fluid headDiv">系统首页</div>
-			<div class="condiv">登录成功！</div>
+			<div class="container-fluid condiv clearfix"><span>登录成功！</span></div>
 		</div>
 	</div>
 	<%@include file="footer.jsp" %>

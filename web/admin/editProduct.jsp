@@ -15,7 +15,7 @@
 	<div class="body">
 		<jsp:include page="left.jsp"/>
 		<div class="contentdiv2">
-			<form action="${pageContext.request.contextPath}/saveProduct" method="post">
+			<form action="${pageContext.request.contextPath}/saveProduct" method="post" enctype="multipart/form-data" onsubmit="return formCheck()">
 				<!-- id隐藏域 -->
 				<input type="hidden" name="id" value="${product.id}"/>
 				<div class="titlediv">编 辑 商 品</div>
@@ -23,21 +23,21 @@
 					<tr>
 						<td>商品名称：</td>
 						<td>
-							<input type="text" name="name" class="form-control" value="${product.name}"/>
+							<input type="text" name="name" class="form-control" value="${product.name}" required/>
 						</td>
 						<td>商品价格：</td>
 						<td>
-							<input type="text" name="price" class="form-control" value="${product.price}"/>
+							<input type="number" name="price" step="any" class="form-control" value="${product.price}" required/>
 						</td>
 					</tr>
 					<tr>
 						<td>商品数量：</td>
 						<td>
-							<input type="text" name="pnum" class="form-control" value="${product.pnum}"/>
+							<input type="number" name="pnum" class="form-control" value="${product.pnum}" required/>
 						</td>
 						<td>商品类别：</td>
 						<td>
-							<select name="category" class="form-control">
+							<select name="category" class="form-control" required>
                                 <c:if test="${product == null}">
                                     <option value="">请选择商品类别</option>
                                 </c:if>
@@ -53,7 +53,7 @@
 					<tr>
 						<td>商品图片：</td>
 						<td colSpan="3">
-							<input type="file" name="imgurl" size="30" value="${product.imgurl}"/></td>
+							<input type="file" name="imgurl" size="30" value="${product.imgurl}" required/></td>
 					</tr>
 					<tr>
 						<td>商品描述：</td>
@@ -79,5 +79,14 @@
 		</div>
 	</div>
 	<jsp:include page="footer.jsp"/>
+<script>
+	function formCheck() {
+		//未选择分类
+		if ($("select[name='category'] option:selected").val().trim() === '') {
+			alert("请选择分类！");
+			return false;
+		}
+	}
+</script>
 </body>
 </html>

@@ -102,4 +102,12 @@ public interface ProductService {
      */
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice);
 
+    /**
+     * 查询销售榜单
+     * @param year
+     * @param month
+     * @return
+     */
+    public List<Object[]> selectSaleList(String year, String month);
+
 }

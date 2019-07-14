@@ -37,7 +37,7 @@
 								<td>${notice.details}</td>
 								<td>${notice.n_time}</td>
 								<td><a href="${pageContext.request.contextPath}/editNotice?id=${notice.n_id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
-								<td><a href="${pageContext.request.contextPath}/deleteNotice?id=${notice.n_id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+								<td><a href="javascript:deleteConfirm('${pageContext.request.contextPath}/deleteNotice?id=${notice.n_id}')"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -50,6 +50,12 @@
 <script>
 	function addNotice(path) {
 		$(location).attr("href",path + "/editNotice");
+	}
+	function deleteConfirm(url) {
+		var result = confirm("您确定删除该公告吗？");
+		if (result === true) {
+			location.href = url;
+		}
 	}
 </script>
 </body>

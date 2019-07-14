@@ -66,7 +66,7 @@
 								<c:if test="${order.paystate == 1}">已支付</c:if>
 							</td>
 							<td><a href="${pageContext.request.contextPath}/orderInfo?id=${order.id}"><img src="${pageContext.request.contextPath}/images/button_view.gif"></a></td>
-							<td><a href="${pageContext.request.contextPath}/deleteOrder?id=${order.id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+							<td><a href="javascript:deleteCheck('${order.paystate}','${pageContext.request.contextPath}/deleteOrder?id=${order.id}')"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 						</tr>
 					</c:forEach>
 					</tbody>
@@ -75,5 +75,17 @@
 		</div>
 	</div>
 	<%@include file="footer.jsp" %>
+<script>
+	function deleteCheck(paystate,url){
+		if (paystate === '0'){
+			alert("未支付订单不能删除！");
+		} else {
+			var result = confirm("您确定删除该订单吗？");
+			if (result === true) {
+				location.href = url;
+			}
+		}
+	}
+</script>
 </body>
 </html>

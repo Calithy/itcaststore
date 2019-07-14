@@ -75,7 +75,7 @@
 								<td>${product.pnum}</td>
 								<td>${product.category}</td>
 								<td><a href="${pageContext.request.contextPath}/editProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_edit.gif"></a></td>
-								<td><a href="${pageContext.request.contextPath}/deleteProduct?id=${product.id}"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
+								<td><a href="javascript:deleteConfirm('${pageContext.request.contextPath}/deleteProduct?id=${product.id}')"><img src="${pageContext.request.contextPath}/images/i_del.gif"></a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -88,6 +88,12 @@
 <script>
 	function addBtnClick(path) {
 		$(location).attr("href",path + "/editProduct");
+	}
+	function deleteConfirm(url) {
+		var result = confirm("您确定删除该商品吗？");
+		if (result === true) {
+			location.href = url;
+		}
 	}
 </script>
 </body>

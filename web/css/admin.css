@@ -2,10 +2,10 @@
 .div1{height:5px;background-color: black;}
 .div2{background-color: #E2E2E2;padding:4px 15px;font-size:13px;border:1px white solid;}
 .date{line-height: 30px;}
-.quitBtn{background-color:#FCFCFC;padding:3px 8px;font-size:13px;float:right;}
+.quitBtn{background-color:#FFFFFF;padding:3px 8px;font-size:13px;float:right; border-radius: 5px; outline: none; border: 1px #FFFFFF solid; cursor: pointer;}
 .base{background-color: #B4D86E;text-align: center;padding:10px 0!important;font-size:13px;}
 .body{min-height: calc(100vh - 148px);}
-.castdiv{background-color: #E2E2E2;padding:30px 0;width:160px;float:left;min-height: calc(100vh - 148px); height: 100%;}
+.castdiv{background-color: #E2E2E2;padding:30px 0;width:160px;float:left;min-height: calc(100vh - 148px);}
 .castdiv a{color:#234A7B;text-decoration: none;}
 .castdiv ul{padding:0;margin:0;}
 .castdiv li{padding:10px 0;text-align: center;border-bottom:1px #CCCCCC dotted;list-style-type: none;font-size:15px;}
@@ -21,11 +21,11 @@
 .titlediv{background-color: #AFD1F3;text-align: center;font-weight: bold;width: 100%;padding:3px 0;margin-top: 8px;}
 .listDataTable{margin: 0 auto;text-align: center;}
 .listDataTable tbody tr td{ vertical-align: middle;}
-.editTable{width:calc(100% - 8px);margin:4px!important;border:1px #8BA7E3 solid;}
+.editTable{width:calc(100% - 8px);margin:4px!important;border:1px #FFFFFF solid;}
 .editTable td{border:1px #EEEEEE solid;padding:2px 0!important;}
 .sTable td{background-color: #EEEEEE;border:1px black solid;}
 .sTable tr:first-of-type td{background-color: #AFD1F3;}
 
 .headDiv{background-color: #F59F1D;padding:10px 0;text-align: center;font-size:20px;font-weight: bold;}
-.condiv{width:700px;margin:0 auto;background: url(../images/back1.jpg);margin-top:100px;min-height:300px;text-align: center;padding:100px 0;font-size:30px;}
+.condiv{background: url(../images/back1.jpg);margin-top:5px;height:300px;text-align: center;font-size:30px;}
 .con{background-color: #F5FAFE;}

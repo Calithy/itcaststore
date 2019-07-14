@@ -87,4 +87,12 @@ public interface ProductDao extends BaseDao<Product>{
      * @return
      */
     public List<String> getAllIds();
+
+    /**
+     * 查询销售榜单
+     * @param year
+     * @param month
+     * @return
+     */
+    public List<Object[]> selectSaleList(String year, String month);
 }
