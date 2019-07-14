@@ -8,3 +8,9 @@
 		<li><a href="${pageContext.request.contextPath}/listNotices">公告管理</a></li>
 	</ul>
 </div>
+
+<script>
+	$(function () {
+		$(".castdiv ul").css("height",$(document).height()-214.5);
+	});
+</script>

@@ -22,13 +22,13 @@
 					<tr>
 						<td>公告标题：</td>
 						<td colSpan="3">
-							<input type="text" name="title" class="form-control" value="${notice.title}"/>
+							<input type="text" name="title" class="form-control" value="${notice.title}" required/>
 						</td>
 					</tr>
 					<tr>
 						<td>公告内容：</td>
 						<td colSpan="3">
-							<textarea name="details" cols="30" rows="5" style="WIDTH: 96%" class="form-control">${notice.details}</textarea>
+							<textarea name="details" cols="30" rows="5" style="WIDTH: 96%" class="form-control" required>${notice.details}</textarea>
 						</td>
 					</tr>
 					<tr>

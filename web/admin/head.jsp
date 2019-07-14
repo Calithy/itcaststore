@@ -6,6 +6,6 @@
 	<div class="col-md-12 div1"></div>
 	<div class="col-md-12 div2 clearfix">
 		<span class="date">2019年7月11日 星期四 </span>
-		<a href="${pageContext.request.contextPath}/index.jsp"><button class="quitBtn">退出系统</button></a>
+		<a href="${pageContext.request.contextPath}/LogoutServlet"><button class="quitBtn">退出系统</button></a>
 	</div>
 </div>
