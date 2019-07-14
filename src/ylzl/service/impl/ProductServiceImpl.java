@@ -95,4 +95,9 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice) {
         return productDao.selectByConditions(id, name, category, minPrice, maxPrice);
     }
+
+    @Override
+    public List<Object[]> selectSaleList(String year, String month) {
+        return productDao.selectSaleList(year, month);
+    }
 }

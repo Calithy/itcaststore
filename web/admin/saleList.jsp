@@ -15,12 +15,12 @@
 		<%@include file="left.jsp" %>
 		<div class="contentdiv2">
 			<div class="titlediv">查 询 条 件</div>
-			<form>
+			<form action="${pageContext.request.contextPath}/downloadSaleList" method="get" onsubmit="return check()">
 				<div class="container-fluid clearfix">
 					<table>
 						<tr>
 							<td>请输入年份：</td>
-							<td><input type="text" class="form-control" name="year"></td>
+							<td><input type="number" class="form-control" name="year" required></td>
 						</tr>
 					</table>
 					<table>
@@ -28,7 +28,7 @@
 							<td>请选择月份：</td>
 							<td>
 								<select name="month" class="form-control">
-									<option value="0">--选择月份--</option>
+									<option value="">--选择月份--</option>
 									<option value="1">一月</option>
 									<option value="2">二月</option>
 									<option value="3">三月</option>
@@ -54,5 +54,20 @@
 		</div>
 	</div>
 	<%@include file="footer.jsp" %>
+<script>
+	function check(){
+		var year = $("input[name='year']").val().trim();
+		var month = $("select[name='month'] option:selected").val().trim();
+		if (parseInt(year) < 1900 || parseInt(year) > 2999){
+			alert("年份范围：1900-2100。");
+			return false;
+		}
+		else if(month === null || month === ''){
+			alert("请选择月份");
+			return false;
+		}
+		return true;
+	}
+</script>
 </body>
 </html>

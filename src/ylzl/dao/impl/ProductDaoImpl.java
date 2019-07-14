@@ -206,6 +206,24 @@ public class ProductDaoImpl implements ProductDao {
         return ids;
     }
 
+    @Override
+    public List<Object[]> selectSaleList(String year, String month) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "SELECT p.name, SUM(oi.buynum) total " +
+                "FROM products p LEFT JOIN orderitem oi ON p.id = oi.product_id " +
+                "LEFT JOIN orders o ON oi.order_id = o.id " +
+                "WHERE YEAR(o.ordertime) = ? AND MONTH(o.ordertime) = ?  AND o.paystate = 1 " +
+                "GROUP BY p.name " +
+                "ORDER BY total DESC";
+        List<Object[]> result = new ArrayList<>();
+        try {
+            result = qr.query(sql, new ArrayListHandler(), year, month);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 
     @Override
     public List<Product> selectByConditions(String id, String name, String category, int minPrice, int maxPrice) {
