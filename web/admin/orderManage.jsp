@@ -80,7 +80,10 @@
 		if (paystate === '0'){
 			alert("未支付订单不能删除！");
 		} else {
-			location.href = url;
+			var result = confirm("您确定删除该订单吗？");
+			if (result === true) {
+				location.href = url;
+			}
 		}
 	}
 </script>
