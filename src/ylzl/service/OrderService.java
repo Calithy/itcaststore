@@ -64,5 +64,11 @@ public interface OrderService {
      */
     public  List<Order> findOrderByUserId(int id);
 
+    /**
+     * 更新订单信息
+     * @param order
+     * @return
+     */
+    public  int update(Order order);
 
 }

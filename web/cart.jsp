@@ -44,6 +44,17 @@
 			location.href = "${pageContext.request.contextPath}/ChangeServlet?id="
 					+ id + "&count=" + count;
 		}
+
+		//删除购物车中的商品
+		function cart_del() {
+			var msg = "您确定要删除该商品吗？";
+			if (confirm(msg)==true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
 	</script>
 </head>
 <body>
@@ -84,7 +95,7 @@
 								<input type="button" value="+" name="plus" onclick="changeProductNum('${product.value+1}','${product.key.pnum}','${product.key.id}')"></td>
 							<td>${product.key.pnum}</td>
 							<td>${product.key.price*product.value}</td>
-							<td><a href="">x</a></td>
+							<td><a href="${pageContext.request.contextPath}/ChangeServlet?id=${product.key.id}&&count=0" onclick="javascript:return cart_del()">X</a></td>
 						</tr>
 					</c:forEach>
 
@@ -100,8 +111,8 @@
 			 	</table>
 			 	<div class="decide container-fluid clearfix">
 			 		<div class="img-float">
-			 			<a href=""  ><img src="images/gwc_jx.gif"></a>
-			 			<a href=""  ><img src="images/gwc_buy.gif"></a>
+			 			<a href="${pageContext.request.contextPath}/ShowAllProductsServlet"  ><img src="images/gwc_jx.gif"></a>
+			 			<a href="${pageContext.request.contextPath}/CreateOrderServlet"  ><img src="images/gwc_buy.gif"></a>
 			 		</div>
 			 		
 			 		

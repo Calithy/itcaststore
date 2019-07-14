@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!DOCTYPE html>
 <html>
@@ -36,6 +37,33 @@
 					$(".pop").css("display","block");
 				}
 			});
+			$("#summitButton").click(function () {
+				var address = $("input[name='address']").val();
+				var username = $("input[name='username']").val();
+				var phone = $("input[name='phone']").val();
+				var money = 50;
+				var len = ${fn:length(orderItems)};
+				alert(len);
+				var orderId = '${orderItems[fn:length(orderItems)-1].id}';
+				alert(orderId);
+				var data = {"address":address,"username":username,"telphone":phone,"orderId":orderId,"money":money};
+				$.post("${pageContext.request.contextPath}/AddAdressServlet",data);
+
+				$(document).ajaxComplete(function(event, xhr, settings){
+					console.log("complete");
+					var url = xhr.getResponseHeader("redirectUrl");
+					var enable = xhr.getResponseHeader("enableRedirect");
+					if((enable == "true") && (url != "")){
+						var win = window;
+						while (win != win.top){
+							win = win.top;
+						}
+						win.location.href = url;
+					}
+				});
+			})
+
+
 		});
 	</script>
 </head>
@@ -66,15 +94,18 @@
 			 			<td>数量</td>
 			 			<td>小计</td>
 			 		</tr>
-			 		<tr>
-			 			<td>1</td>
-			 			<td>网管员必备宝典</td>
-			 			<td>20.0</td>
-			 			<td>原版</td>
-			 			<td><input type="text" name="amount" value="2"> </td>
-			 			<td>20.0</td>
-			 			 
-			 		</tr>
+				   <c:forEach items="${orderItems}" var="orderItem" varStatus="xh">
+					   <tr>
+						   <td>${xh.count}</td>
+						   <td>${orderItem.name}</td>
+						   <td>${orderItem.price}</td>
+						   <td>原版</td>
+						   <td><input type="text" name="amount" value="${orderItem.buynum}"> </td>
+						   <td>${orderItem.price * orderItem.buynum}</td>
+
+					   </tr>
+				   </c:forEach>
+
 			 		<tr>
 			 			<td></td>
 			 			<td></td>
@@ -84,27 +115,27 @@
 			 			<td> 合计：20.0元</td>
 			 		</tr>
 			 	</table>
-			 	<form>
+			 	<form role="form">
 			 		<table>
 			 			<tr>
-			 				<td><label for="address">收获地址</label></td>
+			 				<td><label name="address">收获地址</label></td>
 			 				<td><input type="text" name="address" class="form-control"></td>
 			 				<td><span class="pop"> 收获地址必须填写</span></td>
 			 			</tr>
 			 			<tr>
-			 				<td><label for="user">收货人</label></td>
-			 				<td><input type="text" name="user" class="form-control" value="hanyongmeng"></td>
+			 				<td><label name="username">收货人</label></td>
+			 				<td><input type="text" name="username" class="form-control" value="hanyongmeng"></td>
 			 			</tr>
 			 			<tr>
-			 				<td><label for="phone">联系方式</label></td>
+			 				<td><label name="phone">联系方式</label></td>
 			 				<td><input type="text" name="phone" class="form-control" value="15207545526"></td>
 			 			</tr>
 			 		</table>
-			 		 
+
 			 	</form>
 			 	<hr>
 			 	<div class="order-sub">
-			 		<a href=""><img src="images/gif53_029.gif"></a>
+			 		<img src="images/gif53_029.gif" id="summitButton">
 			 	</div>
 		 	</div>
 		</div>

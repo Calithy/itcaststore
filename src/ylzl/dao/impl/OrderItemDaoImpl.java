@@ -126,7 +126,7 @@ public class OrderItemDaoImpl implements OrderItemDao {
     @Override
     public List<OrderItemDTO> selectOrderItemById(String orderId,int userId) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
-        String sql = "select o.receiverAddress,o.receiverName,o.receiverPhone,o.paystate,o.ordertime,o.user_id,p.id,p.`name`,p.price,orderitem.buynum " +
+        String sql = "select o.receiverAddress,o.receiverName,o.receiverPhone,o.paystate,o.ordertime,o.user_id,p.`name`,p.price,orderitem.buynum " +
                 "from  products as p JOIN orderitem  ON orderitem.product_id = p.id" +
                 " JOIN orders as o on o.id = orderitem.order_id " +
                 "WHERE o.user_id = ? " +

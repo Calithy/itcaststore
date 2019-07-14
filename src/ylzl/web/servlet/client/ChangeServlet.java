@@ -25,16 +25,14 @@ public class ChangeServlet extends HttpServlet {
         int count = Integer.parseInt(request.getParameter("count"));
         HttpSession session = request.getSession();
         Map<Product, Integer> cart = (Map)session.getAttribute("cart");
-
-
-        Product p = new Product();
-        p.setId(id);
+        ProductService productService = new ProductServiceImpl();
+        Product p = productService.getProductById(id);
         if (count != 0) {
-           cart.put(p,count);
+            cart.put(p,count);
         } else {
             cart.remove(p);
         }
-
+        session.setAttribute("cart",cart);
         response.sendRedirect(request.getContextPath() + "/cart.jsp");
     }
 }

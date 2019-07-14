@@ -30,10 +30,11 @@ public class AddCartServlet extends HttpServlet {
         Map<Product,Integer> cart = (Map<Product, Integer>)session.getAttribute("cart"); //前端传来的购物车map
         if(cart == null){
             cart = new HashMap();
+            cart.put(product,1);
         }else{
             if(cart.containsKey(product)){
                 Integer count = cart.get(product);
-                cart.replace(product,count + 1); //更新购物车数量
+                cart.replace(product,count,count + 1); //更新购物车数量
             }else{
                 cart.put(product,1); //新增购物车商品
             }

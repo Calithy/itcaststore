@@ -55,4 +55,10 @@ public class OrderServiceImpl implements OrderService {
     public List<Order> findOrderByUserId(int id) {
         return orderDao.getByUserId(id);
     }
+
+    @Override
+    public int update(Order order) {
+        int row = orderDao.update(order);
+        return row;
+    }
 }

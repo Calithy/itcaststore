@@ -11,6 +11,33 @@ public class Product implements Serializable {
     private String imgurl;//商品图片地址
     private String description;//商品描述
 
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = 31 * result + (this.id == null ? 0 : this.id.hashCode());
+        return result;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        } else if (obj == null) {
+            return false;
+        } else if (this.getClass() != obj.getClass()) {
+            return false;
+        } else {
+            Product other = (Product)obj;
+            if (this.id == null) {
+                if (other.id != null) {
+                    return false;
+                }
+            } else if (!this.id.equals(other.id)) {
+                return false;
+            }
+
+            return true;
+        }
+    }
     public String getId() {
         return id;
     }

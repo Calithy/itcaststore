@@ -55,4 +55,5 @@ public interface OrderDao extends BaseDao<Order> {
      */
     public List<OrderDTO> selectByConditions(String id, String name);
 
+
 }
