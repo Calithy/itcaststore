@@ -25,6 +25,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
 	<link rel="stylesheet" type="text/css" href="css/checkout.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
 	<script type="text/javascript">
 		$(function(){
 			$("input[name=address]").focus(function(){

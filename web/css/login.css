@@ -1,0 +1,44 @@
+.content{
+ 			min-height:calc(100vh - 280px);
+ 			font-size: 15px;
+ 			margin:auto;
+			width: 70%;
+			padding-bottom: 20px;
+			padding-left: 40px;
+			padding-top: 30px;
+			background-color: #FCFDEF;
+ 		 	border: solid 0.2px #EEEDDB;
+ 		}
+ 		.breadcrumb-nobg{
+ 			background-color: #FCFDEF;
+ 			border: none;
+ 			border-radius: 100%;
+ 		}
+ 		.login{
+ 			border: solid 1px #7C7C7C;
+ 		    padding-top: 20px;
+ 		    padding-left: 30px;
+ 		    padding-right: 30px;
+ 		    padding-bottom: 100px;
+ 		    background: linear-gradient(#EEEEEE, #FCFCFC);
+ 		}
+ 		.login form{
+ 			 padding-bottom: 40px;
+ 			 border-bottom: solid 1px #D6D6D6;
+ 		}
+ 		.login div{
+ 			margin-left: 60px;
+ 		}
+ 		.login form table tr td{
+ 			padding: 8px 0;
+ 		}
+ 		.login .form-control{
+ 			width: 200px!important;
+ 			height: 25px!important;
+ 		}
+ 		.container{
+ 			padding-bottom: 40px;
+ 		}
+ 		.toRegister div{
+ 			margin-left: 100px;
+ 		}

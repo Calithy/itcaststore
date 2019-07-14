@@ -24,6 +24,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
 	<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 	<script>
 
 		function changeProductNum(count, totalCount, id) {

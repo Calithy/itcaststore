@@ -1,0 +1,16 @@
+.orders{
+			background-color: #FCFDEF;
+			padding: 20px 20px;
+			border: solid 1px #B0BEC7;
+			margin-top: 40px;
+		}
+		.orders tr td{
+			border-left: solid 1px #C5E0E2;
+			padding: 2px 8px;
+		}
+		.orders tr:nth-of-type(1) td{
+			border: none;
+		}
+		.orders tr td:nth-of-type(1){
+			border: none;
+		}

@@ -23,6 +23,9 @@
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/pay.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 </head>
 <body>
 		<%@include file="pages/header.jsp"%>

@@ -1,0 +1,15 @@
+.booklist{width: 900px;margin:0px auto;border: solid 1px #CCCCCC;background-color: #FCFDEF;padding: 18px 15px;font-size: 12px;}
+.booklist img{width: 115px;height: 129px;}
+.booklist hr{margin:0px;background-color: #888888;}
+.booklist td{padding: 10px 15px;text-align: center;}
+.booklist a{text-decoration-line:none; }
+.booklist a:hover{color: purple;text-decoration-line:none;}
+	.title{font-weight: bold;font-size: 15px;}
+	.img-shadow{border: solid 1px #CCCCCC;padding: 15px 8px;width: 135px;margin:auto;}
+	.pagebtn{text-align: center;padding: 10px 0px;}
+	.pagebtn ul{padding: 0px;margin: 0px;list-style-type: none;}
+	.pagebtn li{display: inline-block;padding: 2px 5px;border: solid 1px #9AAFE5;text-align: center;margin-left: 5px;}
+	.pagebtn li:first-of-type,li:last-of-type{padding: 0px;border: none;}
+	.pagebtn img{width: 85px;height: 25px;}
+	.pagebtn .active{background-color: #2E6ABE;border: solid 1px #000080;}
+	.pagebtn .active a{color: white;}

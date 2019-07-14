@@ -23,9 +23,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/index.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<script src="js/header.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
-	<script src="js/footer.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/footer.css" />
   </head>
   <body>

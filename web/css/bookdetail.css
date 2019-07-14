@@ -1,0 +1,5 @@
+.detail{border: solid 1px #CCCCCC;padding: 8px 8px;margin: 3px auto;background-color: #FCFDEF;width: 902px;font-size: 13px;}
+.detail img.img-top{width: 888px;height: 84px;}
+        .book-img{float: left; border: solid 2px #F3F2DE;padding: 20px 40px;}
+        .des{height: 250px;  float: left;width: 650px;padding: 10px 30px;}
+        .des span:nth-of-type(2){color: red;}

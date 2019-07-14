@@ -24,6 +24,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
  	<link rel="stylesheet" type="text/css" href="css/alterInfo.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
  	<style type="text/css">
  		.order{
  			background-color: #FCFDEF;

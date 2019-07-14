@@ -29,6 +29,9 @@
 	<link rel="stylesheet" type="text/css" href="css/header.css" />
 	<script src="js/footer.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 </head>
 <body>
 	<%@include file="pages/header.jsp"%>

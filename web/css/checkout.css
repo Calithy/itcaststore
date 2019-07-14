@@ -1,0 +1,11 @@
+.checkout{border: solid 1px #CCCCCC;padding: 10px 10px;margin: 3px auto;background-color: #FCFDEF;width: 902px;font-size: 13px;}
+.checkout .table-list{padding: 0px;margin:0px;font-size: 12px;}
+.checkout .table-list tr:first-of-type,.table-list tr:last-of-type{background-color: #E1FFE1;border: solid 1px #CCCCCC;}
+.checkout .table-list td{padding: 8px 15px;}
+.checkout .table-list tr input[type=text]{width: 40px;height: 20px;text-align: center;}
+.checkout .form-control{width: 200px!important;height: 25px!important;}
+.checkout form td{padding: 8px 20px;}
+.checkout table{margin-top: 20px;}
+          .order-sub{float: right;width: 204px;height: 51px;}
+          .order-sub img{width: 204px;height: 51px;}
+ 

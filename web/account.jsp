@@ -25,6 +25,9 @@
 	<script src="js/bootstrap.min.js"></script>
     <script src="js/login.js"></script>
 	 <link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 
 </head>
 <body>

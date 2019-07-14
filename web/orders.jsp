@@ -24,6 +24,9 @@
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
 	<link rel="stylesheet" type="text/css" href="css/alterInfo.css" />
  	<link rel="stylesheet" type="text/css" href="css/orders.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
 </head>
 <body>
 	<%@include file="pages/header.jsp"%>

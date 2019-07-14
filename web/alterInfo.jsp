@@ -24,6 +24,9 @@
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/myAccount.css" />
  	<link rel="stylesheet" type="text/css" href="css/alterInfo.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
  	<script type="text/javascript">
  		$(function(){
  			 
@@ -46,13 +49,14 @@
 					}
 			});
 			$("form").submit(function(){
+				var vari = true;
 				$(".pop").each(function(){
 					if($(this).css("display")=="block"){
 						alert("请确保所有字段填写正确");
-						return false;
+						vari = false;
 					}
 				});
-				return true;
+				return vari;
 
 			});
 			 
@@ -133,8 +137,8 @@
 								<div>
 									 
 									<input type="image" id="alterInfo" src="images/botton_gif_025.gif" onclick="submit">
-									 
-								</div>
+
+			i					</div>
 						</form>
 					</div>
 				</div>

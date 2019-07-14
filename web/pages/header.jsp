@@ -24,7 +24,7 @@
 				%>
           | 		<a href="account.jsp">我的帐户</a>
 				<%}else{%>
-					<a href="myAccount.jsp">我的帐户</a>
+				|<a href="myAccount.jsp">我的帐户</a>
 				<%}%>
           | 		<a href="register.jsp">新用户注册</a>
 				    <div class="row">

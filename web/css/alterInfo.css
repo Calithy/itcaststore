@@ -1,0 +1,30 @@
+.alter{
+			background-color: #FCFDEF;
+			padding: 20px 80px;
+			border: solid 1px #B0BEC7;
+		}
+		.alter table td{
+			padding: 10px 10px;
+		}
+		.alter .form-control{
+			width: 200px!important;
+			height: 25px!important;
+
+		}
+		.alter form div{
+			margin-top: 30px;
+			margin-left: 90px;
+		}
+		.alter form{
+			font-size: 15px;
+			padding-bottom: 20px;
+		}
+		.alter form table{
+			margin-bottom: 50px;
+
+			border-bottom: dashed 1px #B0BEC7;
+		}
+		.alter form td span{
+			font-size: 12px;
+			color: #999999;
+		}
