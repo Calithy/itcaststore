@@ -31,6 +31,7 @@ public class CreateOrderServlet extends HttpServlet {
         Order order = new Order();
         order.setId(UUID.randomUUID().toString()); //生成订单编号
         order.setUser_id(user.getId());
+        order.setOrdertime(new Date());
         Iterator iter = cart.keySet().iterator();
         OrderItemService orderItemService = new OrderItemServiceImpl();
         List<OrderItem> orderItemList = new ArrayList<OrderItem>();

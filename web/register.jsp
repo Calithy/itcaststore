@@ -122,7 +122,9 @@
 						</form>
 					</div>				 
 				</div>
-				 
+
+
+				 </div>
 					<div class="row ">
 					<div class="col-sm-2 content-margin-min ind-big-font"><b>注册验证</b></div>	 
 					</div>

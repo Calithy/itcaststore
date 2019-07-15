@@ -93,7 +93,7 @@ $(function(){
 						 	dataType:"json",
 					        data:JSON.stringify(userData),//请求的参数
 					        success:function(msg){  //成功时的处理函数，msg为服务端传回的文本
-					             
+
 					        }
    					 });
 

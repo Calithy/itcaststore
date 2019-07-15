@@ -34,8 +34,6 @@ public class ActivateServlet extends HttpServlet {
             /**
              * 跳转到激活成功页面
              */
-           // req.getRequestDispatcher()
-            /*转发到哪*/
         }
     }
 }

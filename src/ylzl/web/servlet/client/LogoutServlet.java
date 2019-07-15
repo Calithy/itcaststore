@@ -18,9 +18,6 @@ public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.invalidate();
-        /**
-         * 没懂？
-         */
         String flag = request.getParameter("flag");
         if (flag == null || flag.trim().isEmpty()) {
             response.sendRedirect(request.getContextPath() + "/index.jsp");
