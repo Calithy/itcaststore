@@ -32,21 +32,21 @@ public class PageBean {
         this.startIndex = (pageNum - 1) * pageSize;
 
         this.startPage = 1;
-        this.endPage = 4;
+        this.endPage = 5;
 
         //显示页面的算法，共显示5页
-        if(totalPage <= 4){
+        if(totalPage <= 5){
             this.endPage = this.totalPage;
         }else{
             this.startPage = pageNum - 2;
             this.endPage = pageNum + 2;
             if(startPage <= 0){
-                this.startPage = 2;
-                this.endPage = 3;
+                this.startPage = 1;
+                this.endPage = 5;
             }
             if(endPage >= this.totalPage){
                 this.endPage = this.totalPage;
-                this.startPage = this.endPage - 4;
+                this.startPage = this.endPage - 5;
             }
         }
     }

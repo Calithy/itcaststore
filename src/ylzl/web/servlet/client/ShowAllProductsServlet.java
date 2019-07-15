@@ -23,7 +23,7 @@ public class ShowAllProductsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setHeader("charset","utf-8");
         int pageSize = 4;
-        String nowNum = request.getParameter("PageNum");
+        String nowNum = request.getParameter("pageNum");
         int pageNum = 1;
         if(nowNum != null){
             pageNum = Integer.parseInt(nowNum);
@@ -31,7 +31,11 @@ public class ShowAllProductsServlet extends HttpServlet {
         ProductService productService = new ProductServiceImpl();
          PageBean pageBean = productService.listProductWithPage(pageNum,pageSize);
          request.setAttribute("pageBean",pageBean);
-         //request.setAttribute("pageNum",pageNum);
+         System.out.println(pageBean.getList().size());
+        for (Product p:pageBean.getList()
+             ) {
+            System.out.println(p.getImgurl());
+        }
          request.getRequestDispatcher("booklist.jsp").forward(request,response);
     }
 }

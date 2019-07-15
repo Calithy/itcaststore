@@ -36,7 +36,7 @@
 				<div class="col-sm-9"></div>
 				<div class="col-sm-3">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="">首页</a></li>
+					  <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/index.jsp">首页</a></li>
 					  <li class="breadcrumb-item"><a href="">${product.category}</a></li>
 					  <li class="breadcrumb-item active">${product.name}</li>
 					</ol>
