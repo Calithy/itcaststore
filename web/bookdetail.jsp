@@ -46,10 +46,10 @@
 			  	<img src="images/page_ad.jpg" class="img-top">
 			  	<div class="book clearfix">
 			  		<div class="book-img">
-			  			<img src="images/a2da626c-c72d-4972-83de-cf48405c5563.jpg">
+			  			<img src="images/${product.imgurl}">
 			  		</div>
 			  		<div class="des">
-			  			<img src="images/${product.imgurl}"><span class="title">${product.name}</span>
+			  			<span class="title">${product.name}</span>
 			  			<hr>
 			  			售价：<span>${product.price}</span>
 			  			<hr>

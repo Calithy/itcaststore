@@ -24,6 +24,8 @@ public class FindOrderByIdServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
         String type = request.getParameter("type");//获得订单的当前状态
         String orderid = request.getParameter("orderid");
         User user = (User)request.getSession().getAttribute("user");
