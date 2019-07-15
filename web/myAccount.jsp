@@ -36,7 +36,7 @@
 				<div class="col-sm-8"></div>
 				<div class="col-sm-4">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="#">首页</a></li>
+					  <li class="breadcrumb-item"><a href="index.jsp">首页</a></li>
 					  <li class="breadcrumb-item active"><b>我的账户</b></li>
 					  <li class="breadcrumb-item active">欢迎</li>
 					</ol>

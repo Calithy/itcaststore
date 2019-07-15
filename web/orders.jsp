@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!DOCTYPE html>
 <html>
@@ -36,31 +37,31 @@
 				<div class="col-sm-8"></div>
 				<div class="col-sm-4">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="">首页</a></li>
+					  <li class="breadcrumb-item"><a href="index.jsp">首页</a></li>
 					  <li class="breadcrumb-item active"><b>我的账户</b></li>
 					  <li class="breadcrumb-item active">用户信息修改</li>
 					</ol>
 				</div>
 			</div>
 			<div class="row sider">
-				<div class="col-sm-1"></div>
+
 				<div class="col-sm-3">
 					<ul>
 						<li>
 							我的账户
 						</li>
 						<li>
-							<img src="images/icon1.png"><a href="alterInfo.jsp">用户信息修改</a>
+							<img src="images/icon1.png"><a href="alterInfo.jsp?id=${sessionScope.user.getId()}">用户信息修改</a>
 						</li>
 						<li>
-							<img src="images/icon2.png"><a href="orders.jsp">订单查询</a>
+							<img src="images/icon2.png"><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a>
 						</li>
 						<li>
-							<img src="images/icon3.png"><a href="index.jsp">用户退出</a>
+							<img src="images/icon3.png"><a href="${pageContext.request.contextPath}/LogoutServlet">用户退出</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-sm-8">
+				<div class="col-sm-9">
 					<div class="orders">
 						<%
 							request.getAttribute("orders");

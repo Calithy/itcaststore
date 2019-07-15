@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!DOCTYPE html>
 <html>
@@ -34,9 +35,9 @@
 			<div class="container-fluid row">
 				<div class="col-md-8"></div>
 				<ol class="breadcrumb col-md-4" style="background-color:white;font-size:13px;">
-				  <li class="breadcrumb-item"><a href="">首页</a></li>
-				  <li class="breadcrumb-item"><a href="">我的账户</a></li>
-				  <li class="breadcrumb-item"><a href="">订单查询</a></li>
+				  <li class="breadcrumb-item"><a href="index.jsp">首页</a></li>
+				  <li class="breadcrumb-item"><a href="myAccount.jsp">我的账户</a></li>
+				  <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a></li>
 				  <li class="breadcrumb-item"><a class="active" href="#">订单支付</a></li>
 				</ol>
 			</div>
@@ -44,9 +45,9 @@
 				<div class="col-md-3 catadiv">
 					<span class="title" style="color:#1C3F09;">我的账户</span><br><hr>
 					<ul>
-						<li><img src="images/icon1.png"/><a href="">用户信息修改</a></li>
-						<li><img src="images/icon2.png"/><a href="">订单查询</a></li>
-						<li><img src="images/icon3.png"/><a href="#">用户退出</a></li>
+						<li><img src="images/icon1.png"/><a href="alterInfo.jsp?id=${sessionScope.user.getId()}">用户信息修改</a></li>
+						<li><img src="images/icon2.png"/><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a></li>
+						<li><img src="images/icon3.png"/><a href="${pageContext.request.contextPath}/LogoutServlet">用户退出</a></li>
 					</ul>
 				</div>
 				<div class="col-md-8 paydiv">

@@ -61,9 +61,9 @@
 				<div class="col-sm-7"></div>
 				<div class="col-sm-5">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="">首页</a></li>
-					  <li class="breadcrumb-item "><a href="">我的账户</a></li>
-					  <li class="breadcrumb-item "><a href="">订单查询</a></li>
+					  <li class="breadcrumb-item"><a href="index.jsp">首页</a></li>
+					  <li class="breadcrumb-item "><a href="myAccount.jsp">我的账户</a></li>
+					  <li class="breadcrumb-item "><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a></li>
 					  <li class="breadcrumb-item active">订单详细信息</li>
 					</ol>
 				</div>

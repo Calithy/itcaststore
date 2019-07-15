@@ -37,12 +37,8 @@ public class UserInfoChangeServlet extends HttpServlet {
         }
 
         int row = userService.update(user);
-        if(row != 0){
-            response.sendRedirect("成功修改页面");
-        }else{
-           request.setAttribute("message","修改失败!");
-           request.getRequestDispatcher("alterinfo.jsp").forward(request,response);
-        }
+
+        response.sendRedirect("myAccount.jsp");
 
 
 

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!DOCTYPE html>
 <html>
@@ -58,9 +59,9 @@
 				<div class="col-sm-7"></div>
 				<div class="col-sm-5">
 					<ol class="breadcrumb">
-					  <li class="breadcrumb-item"><a href="">首页</a></li>
-					  <li class="breadcrumb-item "><a href="">我的账户</a></li>
-					  <li class="breadcrumb-item "><a href="">订单查询</a></li>
+					  <li class="breadcrumb-item"><a href="index.jsp">首页</a></li>
+					  <li class="breadcrumb-item "><a href="myAccount.jsp">我的账户</a></li>
+					  <li class="breadcrumb-item "><a href="${pageContext.request.contextPath}/FindOrderByUserServlet">订单查询</a></li>
 					  <li class="breadcrumb-item active">订单详细信息</li>
 					</ol>
 				</div>
@@ -115,7 +116,7 @@
 				 
 					<div class="col-sm-8"></div>
 					<div class="col-sm-4">
-						<a href="pay.jsp?orderid=${orderItems[0].id}&&money=${orderMoney}">
+						<a href="pay.jsp?orderid=${orderItems[fn:length(orderItems) - 1].id}&&money=${orderMoney}">
 							<img src=" images/gif53_030.gif" width="204" height="51" border="0">
 						</a>
 						

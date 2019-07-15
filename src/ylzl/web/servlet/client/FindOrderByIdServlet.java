@@ -29,6 +29,9 @@ public class FindOrderByIdServlet extends HttpServlet {
         User user = (User)request.getSession().getAttribute("user");
         OrderItemDao orderItemDao = new OrderItemDaoImpl();
         List<OrderItemDTO> orderItemDTOList = orderItemDao.selectOrderItemById(orderid,user.getId());
+        OrderItemDTO orderItemDTO = new OrderItemDTO();
+        orderItemDTO.setId(orderid);
+        orderItemDTOList.add(orderItemDTO);
         request.setAttribute("orderItems",orderItemDTOList);
         OrderService orderService = new OrderServiceImpl();
         Order order = orderService.getOrderById(orderid);
