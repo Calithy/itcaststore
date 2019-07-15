@@ -57,7 +57,7 @@ public class LoginServlet extends HttpServlet {
             }else {
                 System.out.println(request.getContextPath() + "/myAccount.jsp");
                 if (user.getRole().equals("超级用户")) {
-                    response.setHeader("redirectUrl",request.getContextPath() + "/index.jsp");
+                    response.setHeader("redirectUrl",request.getContextPath() + "/admin/home.jsp");
                     response.setHeader("enableRedirect","true");
                 } else {
                     response.setHeader("redirectUrl",request.getContextPath() + "/myAccount.jsp");

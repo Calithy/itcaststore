@@ -69,7 +69,7 @@
 			<div class="order">
 				<div>
 					<label class="title">
-						订单编号:305a7870-3820-4079-b6f9-5d2b63cbcd2a
+						订单编号:${orderItems[fn:length(orderItems)-1].id}
 					</label>
 					<table>
 						<tr>
@@ -90,7 +90,6 @@
 								<td>${item.buynum}</td>
 								<td>${item.price * item.buynum}</td>
 							</tr>
-
 						</c:forEach>
 
 						<tr>

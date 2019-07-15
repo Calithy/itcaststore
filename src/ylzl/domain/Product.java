@@ -90,6 +90,13 @@ public class Product implements Serializable {
         return description;
     }
 
+    public String getImgurl_s() {
+        int index = this.imgurl.lastIndexOf(".");
+        String first = this.imgurl.substring(0, index);
+        String last = this.imgurl.substring(index);
+        return first + "_s" + last;
+    }
+
     public void setDescription(String description) {
         this.description = description;
     }
