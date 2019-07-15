@@ -37,8 +37,8 @@
 				<div class="col-sm-3">
 					<ol class="breadcrumb">
 					  <li class="breadcrumb-item"><a href="">首页</a></li>
-					  <li class="breadcrumb-item"><a href="">文学</a></li>
-					  <li class="breadcrumb-item active">学会宽容</li>
+					  <li class="breadcrumb-item"><a href="">${product.category}</a></li>
+					  <li class="breadcrumb-item active">${product.name}</li>
 					</ol>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 			  	<img src="images/page_ad.jpg" class="img-top">
 			  	<div class="book clearfix">
 			  		<div class="book-img">
-			  			<img src="images/${product.imgurl}">
+			  			<img src="${pageContext.request.contextPath}/images${product.imgurl}">
 			  		</div>
 			  		<div class="des">
 			  			<span class="title">${product.name}</span>

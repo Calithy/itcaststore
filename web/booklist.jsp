@@ -58,7 +58,7 @@
                         <c:forEach items="${pageBean.list}" var="book">
                             <td>
                                 <div class="img-shadow">
-                                    <img src="images/${book.imgurl}">
+                                    <img src="${pageContext.request.contextPath}/images${book.imgurl}">
 
                                 </div>
                                 <a href="${pageContext.request.contextPath}/FindProductByIdServlet?id=${book.id}">${book.name}<br>售价：${book.price}元</a>
