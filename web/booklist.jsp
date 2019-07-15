@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!DOCTYPE html>
 <html>
@@ -47,7 +48,7 @@
 			<div class="booklist">
 				<label class="title">商品目录</label>
 				<hr>
-				<label class="title">全部商品 </label> 共18种商品 
+				<label class="title">全部商品 </label> 共${pageBean.totalRecord}种商品
 				<hr>
 				<div class="container-fluid">
 					<img src="images/productlist.gif" style="width:100%;height: 38px;margin:15px 0;">
